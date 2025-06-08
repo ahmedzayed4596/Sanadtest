@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <Home />
+      <h2>mostafa</h2>
     </>
   );
 }
