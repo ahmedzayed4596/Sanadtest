@@ -6,7 +6,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
   const [count, setCount] = useState(0);
-  const router = createBrowserRouter([{}])
+  const router = createBrowserRouter([{
+    element : lay 
+  }])
 
 createBrowserRouter
   return <> <RouterProvider router={router}></RouterProvider> </>
