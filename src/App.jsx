@@ -10,6 +10,7 @@ import Contact from "./Component/Contact/Contact";
 
 function App() {
   const [count, setCount] = useState(0);
+<<<<<<< HEAD
   const router = createBrowserRouter([
     {
       element: <Layout />,
@@ -21,6 +22,11 @@ function App() {
       ],
     },
   ]);
+=======
+  const router = createBrowserRouter([{
+    element : lay 
+  }])
+>>>>>>> ed90595908da1e1b952339744576cc36e8c3f664
 
   createBrowserRouter;
   return (
