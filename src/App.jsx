@@ -3,13 +3,32 @@ import "./App.css";
 import Nav from "./Component/Nav/Nav";
 import Home from "./Component/Home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./Component/Layout/Layout";
+import About from "./Component/About/About";
+import Servcies from "./Component/Servcies/Servcies";
+import Contact from "./Component/Contact/Contact";
 
 function App() {
   const [count, setCount] = useState(0);
-  const router = createBrowserRouter([{}])
+  const router = createBrowserRouter([
+    {
+      element: <Layout />,
+      children: [
+        { index: true, element: <Home></Home> },
+        { path: "/About", element: <About></About> },
+        { path: "/Servcies", element: <Servcies></Servcies> },
+        { path: "/Contact", element: <Contact></Contact> },
+      ],
+    },
+  ]);
 
-createBrowserRouter
-  return <> <RouterProvider router={router}></RouterProvider> </>
+  createBrowserRouter;
+  return (
+    <>
+      {" "}
+      <RouterProvider router={router}></RouterProvider>{" "}
+    </>
+  );
 }
 
 export default App;
