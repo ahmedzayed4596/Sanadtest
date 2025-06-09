@@ -8,11 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "postinstall": "flowbite-react patch",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "postinstall": "flowbite-react patch"
   },
-  "homepage": "https://ahmedzayed4596.github.io/Sanadtest",
   "dependencies": {
     "@fontsource/cairo": "^5.2.5",
     "@tailwindcss/vite": "^4.1.8",
