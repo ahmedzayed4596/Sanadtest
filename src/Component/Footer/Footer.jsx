@@ -5,11 +5,11 @@ import logo1 from "../../assets/sanad logo.png";
 export default function Footer() {
   return (
     <>
-      <footer className="bg-white ">
+      <footer className="bg-white z-50">
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
-            <div>
+            <div className="md:self-center">
               <img src={logo1} className="h-16 flex" alt="Sanad Logo" />
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
