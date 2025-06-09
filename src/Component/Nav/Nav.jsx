@@ -51,7 +51,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/"}
-                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-gray-900 hover:text-[#fac337]"
+                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   الرئيسية
                 </NavLink>
@@ -59,7 +59,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/About"}
-                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-gray-900 hover:text-[#fac337]"
+                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   من نحن
                 </NavLink>
@@ -67,7 +67,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/Servcies"}
-                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-gray-900 hover:text-[#fac337]"
+                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   خدماتنا
                 </NavLink>
@@ -75,7 +75,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/Partner"}
-                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-gray-900 hover:text-[#fac337]"
+                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   عملاؤنا
                 </NavLink>
@@ -83,7 +83,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/Contact"}
-                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-gray-900 hover:text-[#fac337]"
+                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   تواصل معنا
                 </NavLink>
@@ -91,7 +91,7 @@ export default function Nav() {
             </ul>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
       </nav>
     </>
   );
