@@ -7,10 +7,10 @@ import back2 from "../../assets/back.jpeg";
 export default function Home() {
   return (
     <>
-      <Nav />
+      
       <div
         id="default-carousel"
-        className="relative w-full h-screen z-40"
+        className="relative w-full h-screen z-30 "
         data-carousel="slide"
       >
         <div className="relative overflow-hidden h-full">
