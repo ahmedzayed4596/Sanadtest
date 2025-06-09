@@ -4,9 +4,6 @@ import flowbiteReact from "flowbite-react/plugin/vite"
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  plugins: [react(), flowbiteReact(), tailwindcss()],
-  server: {
-    host: true,   
-    port: 5173,    
-  },
-})
+  base: '/Sanadtest/', 
+  plugins: [react()],
+});
