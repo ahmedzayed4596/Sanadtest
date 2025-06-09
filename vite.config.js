@@ -1,12 +1,7 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import flowbiteReact from "flowbite-react/plugin/vite"
-import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react(), flowbiteReact(), tailwindcss()],
-  server: {
-    host: true,   
-    port: 5173,    
-  },
-})
+  base: '/Sanadtest/', // ✅ must match your repo name exactly
+  plugins: [react()],
+});
