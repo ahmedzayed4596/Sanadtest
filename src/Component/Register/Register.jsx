@@ -8,7 +8,7 @@ export default function Register() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2">
             <div className="col-span-1">
-              <h2 className=" text-green-800 my-4 text-center text-4xl font-serif ">
+              <h2 className=" text-green-500 my-4 text-center text-4xl font-serif ">
                 تسجيل جديد
               </h2>
 
