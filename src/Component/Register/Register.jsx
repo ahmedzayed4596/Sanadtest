@@ -4,7 +4,7 @@ import signupImg from "../../assets/singup.png";
 export default function Register() {
   return (
     <>
-      <div className="pt-40 px-7 h-screen">
+      <div className="pt-40 px-7 ">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2">
             <div className="col-span-1">
