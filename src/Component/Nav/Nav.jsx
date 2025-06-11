@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./Nav.module.css";
 import logo from "../../assets/logo.png";
+import logo2 from "../../assets/sanad logo.png";
 import { Link, NavLink } from "react-router-dom";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ export default function Nav() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src={logo}
+              src={logo2}
               className="h-16 hover:cursor-pointer"
               alt="Sanad Logo"
             />

@@ -3,9 +3,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import back from "../../assets/back.jpeg";
 import back1 from "../../assets/back1.jpeg";
-import logo2 from "../../assets/sanad logo.png";
+import logo2 from "../../assets/logo.png";
 
-const images = [back1, back, back1, back]; // يمكنك إضافة أو إزالة حسب الحاجة
+const images = [back1, back, back1, back];
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -15,7 +15,7 @@ export default function Home() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 5000); // 5 ثواني لكل صورة
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -24,7 +24,7 @@ export default function Home() {
     <section id="home" className="relative">
       <div id="default-carousel" className="relative w-full h-screen z-40">
         <div className="relative overflow-hidden h-full">
-          {/* Overlay */}
+          
           <div className="absolute z-40 inset-0 flex items-center justify-center bg-black/50">
             <div className="text-center text-white">
               <img
@@ -33,7 +33,7 @@ export default function Home() {
                 data-aos-duration="3000"
                 src={logo2}
                 alt="Logo"
-                className="inline-block mb-2 max-w-64"
+                className="inline-block mb-2 max-w-52"
               />
               <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4 mt-5">
                 <a
@@ -48,8 +48,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          {/* Slides */}
+          
           {images.map((img, index) => (
             <div
               key={index}
@@ -66,7 +65,6 @@ export default function Home() {
           ))}
         </div>
       </div>
-
       <div className="absolute bottom-0 left-0 w-full h-1 z-50 bg-gradient-to-l from-yellow-200 via-yellow-400 to-yellow-600"></div>
     </section>
   );
