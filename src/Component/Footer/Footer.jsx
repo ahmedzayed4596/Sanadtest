@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./Footer.module.css";
 import logo1 from "../../assets/sanad logo.png";
+import vision from "../../assets/vision.png";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -10,13 +11,13 @@ export default function Footer() {
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
-            <div className="md:self-center">
-              <img src={logo1} className="h-16 flex" alt="Sanad Logo" />
+            <div className="self-center">
+              <img src={logo1} className="h-20 flex mb-3" alt="Sanad Logo" />
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-[#07543a]  uppercase ">
-                  Resources
+                  روابط مهمة
                 </h2>
                 <ul className="text-black  font-medium">
                   <li className="mb-4">
@@ -24,7 +25,7 @@ export default function Footer() {
                       href="https://flowbite.com/"
                       className="hover:underline hover:text-[#fac337]"
                     >
-                      Flowbite
+                      خدماتنا
                     </a>
                   </li>
                   <li>
@@ -32,37 +33,15 @@ export default function Footer() {
                       href="https://tailwindcss.com/"
                       className="hover:underline hover:text-[#fac337]"
                     >
-                      Tailwind CSS
+                      العروض
                     </a>
                   </li>
                 </ul>
               </div>
+
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-[#07543a]  uppercase ">
-                  Follow us
-                </h2>
-                <ul className="text-black  font-medium">
-                  <li className="mb-4">
-                    <a
-                      href="https://github.com/themesberg/flowbite"
-                      className="hover:underline hover:text-[#fac337] "
-                    >
-                      Github
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://discord.gg/4eeurUVvTy"
-                      className="hover:underline hover:text-[#fac337]"
-                    >
-                      Discord
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h2 className="mb-6 text-sm font-semibold text-[#07543a]  uppercase ">
-                  Legal
+                  روابط سريعة
                 </h2>
                 <ul className="text-black  font-medium">
                   <li className="mb-4">
@@ -70,7 +49,7 @@ export default function Footer() {
                       href="#"
                       className="hover:underline hover:text-[#fac337]"
                     >
-                      Privacy Policy
+                      معلومات عنا
                     </a>
                   </li>
                   <li>
@@ -78,7 +57,7 @@ export default function Footer() {
                       href="#"
                       className="hover:underline hover:text-[#fac337]"
                     >
-                      Terms &amp; Conditions
+                      تواصل معنا
                     </a>
                   </li>
                 </ul>
@@ -97,6 +76,21 @@ export default function Footer() {
               </a>
               . All Rights Reserved.
             </span>
+            <div>
+              <span className="flex gap-3 text-sm text-black sm:text-center">
+                © 2025
+                <p class="text-gray-500">
+                  Designed & Development by
+                  <a
+                    className="watermark font-bold text-black hover:text-[#fcc24c]"
+                    href="https://wa.me/+966506794692"
+                    target="_blank"
+                  >
+                    A-M
+                  </a>
+                </p>
+              </span>
+            </div>
             <div className="flex mt-4 sm:justify-center sm:mt-0">
               <Link
                 to={"https://x.com/sanadofficial11/"}
@@ -105,9 +99,9 @@ export default function Footer() {
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
-                  width="24px"
-                  height="24px"
-                  className="text-black hover:text-[#fac337] transition duration-300 fill-current"
+                  width="22px"
+                  height="22px"
+                  className="text-black hover:scale-125 transition duration-300 fill-current"
                 >
                   <g opacity=".3">
                     <polygon
@@ -147,14 +141,53 @@ export default function Footer() {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 30 30"
+                  viewBox="0 0 48 48"
                   width="24px"
                   height="24px"
-                  className="fill-current transition duration-300"
+                  className="hover:scale-125 transition duration-300"
                 >
+                  <radialGradient
+                    id="yOrnnhliCrdS2gy~4tD8ma"
+                    cx="19.38"
+                    cy="42.035"
+                    r="44.899"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#fd5" />
+                    <stop offset=".328" stop-color="#ff543f" />
+                    <stop offset=".348" stop-color="#fc5245" />
+                    <stop offset=".504" stop-color="#e64771" />
+                    <stop offset=".643" stop-color="#d53e91" />
+                    <stop offset=".761" stop-color="#cc39a4" />
+                    <stop offset=".841" stop-color="#c837ab" />
+                  </radialGradient>
                   <path
-                    fill="currentColor"
-                    d="M 9.9980469 3 C 6.1390469 3 3 6.1419531 3 10.001953 L 3 20.001953 C 3 23.860953 6.1419531 27 10.001953 27 L 20.001953 27 C 23.860953 27 27 23.858047 27 19.998047 L 27 9.9980469 C 27 6.1390469 23.858047 3 19.998047 3 L 9.9980469 3 z M 22 7 C 22.552 7 23 7.448 23 8 C 23 8.552 22.552 9 22 9 C 21.448 9 21 8.552 21 8 C 21 7.448 21.448 7 22 7 z M 15 9 C 18.309 9 21 11.691 21 15 C 21 18.309 18.309 21 15 21 C 11.691 21 9 18.309 9 15 C 9 11.691 11.691 9 15 9 z M 15 11 A 4 4 0 0 0 11 15 A 4 4 0 0 0 15 19 A 4 4 0 0 0 19 15 A 4 4 0 0 0 15 11 z"
+                    fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                    d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+                  />
+                  <radialGradient
+                    id="yOrnnhliCrdS2gy~4tD8mb"
+                    cx="11.786"
+                    cy="5.54"
+                    r="29.813"
+                    gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop offset="0" stop-color="#4168c9" />
+                    <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+                  </radialGradient>
+                  <path
+                    fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                    d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+                  />
+                  <path
+                    fill="#fff"
+                    d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+                  />
+                  <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+                  <path
+                    fill="#fff"
+                    d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
                   />
                 </svg>
                 <span className="sr-only">Instagram account</span>
@@ -163,13 +196,36 @@ export default function Footer() {
               <a href="#" className="text-black hover:text-[#fac337] ms-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
+                  viewBox="0 0 48 48"
                   width="24px"
                   height="24px"
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  className="hover:scale-125 transition duration-300"
                 >
                   <path
-                    className="fill-blue-700 hover:fill-amber-400 transition duration-300"
-                    d="M 6 3 C 4.3550302 3 3 4.3550302 3 6 L 3 18 C 3 19.64497 4.3550302 21 6 21 L 18 21 C 19.64497 21 21 19.64497 21 18 L 21 6 C 21 4.3550302 19.64497 3 18 3 L 6 3 z M 12 7 L 14 7 C 14 8.005 15.471 9 16 9 L 16 11 C 15.395 11 14.668 10.734156 14 10.285156 L 14 14 C 14 15.654 12.654 17 11 17 C 9.346 17 8 15.654 8 14 C 8 12.346 9.346 11 11 11 L 11 13 C 10.448 13 10 13.449 10 14 C 10 14.551 10.448 15 11 15 C 11.552 15 12 14.551 12 14 L 12 7 z"
+                    fill="#212121"
+                    fill-rule="evenodd"
+                    d="M10.904,6h26.191C39.804,6,42,8.196,42,10.904v26.191 C42,39.804,39.804,42,37.096,42H10.904C8.196,42,6,39.804,6,37.096V10.904C6,8.196,8.196,6,10.904,6z"
+                    clip-rule="evenodd"
+                  />
+                  <path
+                    fill="#ec407a"
+                    fill-rule="evenodd"
+                    d="M29.208,20.607c1.576,1.126,3.507,1.788,5.592,1.788v-4.011 c-0.395,0-0.788-0.041-1.174-0.123v3.157c-2.085,0-4.015-0.663-5.592-1.788v8.184c0,4.094-3.321,7.413-7.417,7.413 c-1.528,0-2.949-0.462-4.129-1.254c1.347,1.376,3.225,2.23,5.303,2.23c4.096,0,7.417-3.319,7.417-7.413L29.208,20.607L29.208,20.607 z M30.657,16.561c-0.805-0.879-1.334-2.016-1.449-3.273v-0.516h-1.113C28.375,14.369,29.331,15.734,30.657,16.561L30.657,16.561z M19.079,30.832c-0.45-0.59-0.693-1.311-0.692-2.053c0-1.873,1.519-3.391,3.393-3.391c0.349,0,0.696,0.053,1.029,0.159v-4.1 c-0.389-0.053-0.781-0.076-1.174-0.068v3.191c-0.333-0.106-0.68-0.159-1.03-0.159c-1.874,0-3.393,1.518-3.393,3.391 C17.213,29.127,17.972,30.274,19.079,30.832z"
+                    clip-rule="evenodd"
+                  />
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M28.034,19.63c1.576,1.126,3.507,1.788,5.592,1.788v-3.157 c-1.164-0.248-2.194-0.856-2.969-1.701c-1.326-0.827-2.281-2.191-2.561-3.788h-2.923v16.018c-0.007,1.867-1.523,3.379-3.393,3.379 c-1.102,0-2.081-0.525-2.701-1.338c-1.107-0.558-1.866-1.705-1.866-3.029c0-1.873,1.519-3.391,3.393-3.391 c0.359,0,0.705,0.056,1.03,0.159V21.38c-4.024,0.083-7.26,3.369-7.26,7.411c0,2.018,0.806,3.847,2.114,5.183 c1.18,0.792,2.601,1.254,4.129,1.254c4.096,0,7.417-3.319,7.417-7.413L28.034,19.63L28.034,19.63z"
+                    clip-rule="evenodd"
+                  />
+                  <path
+                    fill="#81d4fa"
+                    fill-rule="evenodd"
+                    d="M33.626,18.262v-0.854c-1.05,0.002-2.078-0.292-2.969-0.848 C31.445,17.423,32.483,18.018,33.626,18.262z M28.095,12.772c-0.027-0.153-0.047-0.306-0.061-0.461v-0.516h-4.036v16.019 c-0.006,1.867-1.523,3.379-3.393,3.379c-0.549,0-1.067-0.13-1.526-0.362c0.62,0.813,1.599,1.338,2.701,1.338 c1.87,0,3.386-1.512,3.393-3.379V12.772H28.095z M21.635,21.38v-0.909c-0.337-0.046-0.677-0.069-1.018-0.069 c-4.097,0-7.417,3.319-7.417,7.413c0,2.567,1.305,4.829,3.288,6.159c-1.308-1.336-2.114-3.165-2.114-5.183 C14.374,24.749,17.611,21.463,21.635,21.38z"
+                    clip-rule="evenodd"
                   />
                 </svg>
                 <span className="sr-only">Tiktok account</span>
