@@ -4,14 +4,13 @@ import signupImg from "../../assets/singup.png";
 export default function Register() {
   return (
     <>
-      <div className="pt-40 px-7 h-screen  bg-{}">
+      <div className="pt-40 px-7 h-screen">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2">
             <div className="col-span-1">
               <h2 className=" text-green-800 my-4 text-center text-4xl font-serif ">
                 تسجيل جديد
               </h2>
-
               <form className="max-w-md mx-auto">
                 <div className="relative z-0 w-full mb-5 group">
                   <input
@@ -53,7 +52,7 @@ export default function Register() {
                   <label
                     for="default_outlined"
                     class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white 
-                     px-2 peer-focus:px-2 peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto "
+                    px-2 peer-focus:px-2 peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto "
                   >
                     كلمة المرور :{" "}
                   </label>
@@ -68,12 +67,11 @@ export default function Register() {
                   <label
                     for="default_outlined"
                     class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white 
-                     px-2 peer-focus:px-2 peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto "
+                    px-2 peer-focus:px-2 peer-focus:text-green-600 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 start-1 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto "
                   >
                     رقم الهاتف :{" "}
                   </label>
                 </div>
-               
 
                 <button
                   type="submit"
@@ -86,7 +84,7 @@ export default function Register() {
             <div className="md:col-span-1 lg:block hidden">
               <img
                 src={signupImg}
-                height="500px"
+                height="300px"
                 className="w-full  object-cover rounded-lg shadow-2xl"
                 alt=""
               />
