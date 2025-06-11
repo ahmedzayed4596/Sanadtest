@@ -54,7 +54,7 @@ export default function Nav() {
               isOpen ? "block" : "hidden"
             } w-full lg:flex lg:w-auto lg:order-1`}
           >
-            <ul className="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
+            <ul className="flex flex-col p-4 lg:p-0 mt-4 font-medium border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
               <li>
                 <NavLink
                   to={"/"}
