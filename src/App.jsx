@@ -7,6 +7,8 @@ import Layout from "./Component/Layout/Layout";
 import About from "./Component/About/About";
 import Servcies from "./Component/Servcies/Servcies";
 import Contact from "./Component/Contact/Contact";
+import Singin from "./Component/Singin/Singin";
+import Register from "./Component/Register/Register";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +20,8 @@ function App() {
         { path: "/About", element: <About></About> },
         { path: "/Servcies", element: <Servcies></Servcies> },
         { path: "/Contact", element: <Contact></Contact> },
+        { path: "/Register", element: <Register></Register> },
+        { path: "/Singin", element: <Singin></Singin> },
       ],
     },
   ]);

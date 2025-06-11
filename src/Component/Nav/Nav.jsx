@@ -14,18 +14,24 @@ export default function Nav() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src={logo2}
+              src={logo}
               className="h-16 hover:cursor-pointer"
               alt="Sanad Logo"
             />
           </Link>
           <div className="flex md:order-2 gap-2 space-x-3 md:space-x-0">
-            <button className="text-white bg-[#07543a] hover:bg-[#07543ab2] hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2">
+            <Link
+              to={"/Register"}
+              className="text-white bg-[#07543a] hover:bg-[#07543ab2] hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
+            >
               إنشاء حساب
-            </button>
-            <button className="text-white bg-[#07543a] hover:bg-[#07543ab2] hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2">
+            </Link>
+            <Link
+              to={"/Singin"}
+              className="text-white bg-[#07543a] hover:bg-[#07543ab2] hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
+            >
               تسجيل دخول
-            </button>
+            </Link>
             <button
               onClick={() => setIsOpen(!isOpen)}
               type="button"
