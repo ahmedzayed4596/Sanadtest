@@ -15,7 +15,7 @@ export default function Nav() {
           >
             <img
               src={logo2}
-              className="h-16 hover:cursor-pointer"
+              className="h-16 hover:cursor-pointer "
               alt="Sanad Logo"
             />
           </Link>
