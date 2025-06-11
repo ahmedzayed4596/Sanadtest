@@ -7,7 +7,7 @@ export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="bg-white shadow-xl fixed w-full z-50 top-0 start-0">
+      <nav className="bg-white shadow-2xl fixed w-full z-50 top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to={"/"}
