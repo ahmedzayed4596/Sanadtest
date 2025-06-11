@@ -14,7 +14,7 @@ export default function Nav() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
-              src={logo}
+              src={logo2}
               className="h-16 hover:cursor-pointer"
               alt="Sanad Logo"
             />
