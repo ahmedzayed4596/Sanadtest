@@ -1,2 +1,5 @@
 @import "tailwindcss";
 @import "flowbite";
+.active {
+    @apply bg-[#fac337] rounded-lg text-white
+}
