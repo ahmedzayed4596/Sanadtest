@@ -79,7 +79,7 @@ export default function Register() {
             <div className="md:col-span-1 lg:block hidden">
               <img
                 src={signupImg}
-                height="300px"
+                height="500px"
                 className="w-full  object-cover rounded-lg shadow-2xl"
                 alt=""
               />
