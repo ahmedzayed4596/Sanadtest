@@ -56,7 +56,11 @@ export default function Home() {
                 currentSlide === index ? "opacity-100 z-30" : "opacity-0 z-10"
               }`}
             >
-              
+              <img
+                src={img}
+                className="block w-full h-full object-cover"
+                alt={`slide-${index}`}
+              />
             </div>
           ))}
         </div>
