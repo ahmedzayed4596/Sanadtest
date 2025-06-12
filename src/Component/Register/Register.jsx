@@ -14,7 +14,7 @@ export default function Register() {
               >
                 <span className="text-white">تسجيل</span> جديد
               </h2>
-              <form className="max-w-md mx-auto mt-5">
+              <form className="max-w-md px-3 mx-auto mt-5">
                 <div class="relative z-0 mb-5 group">
                   <input
                     required
@@ -83,7 +83,7 @@ export default function Register() {
                   </label>
                 </div>
                 <div>
-                  <p className="text-white mb-2">
+                  <p className="text-white my-4">
                     هل لديك حساب :{" "}
                     <span>
                       <Link
@@ -97,7 +97,7 @@ export default function Register() {
                 </div>
                 <button
                   type="submit"
-                  className="text-white bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
+                  className="text-white w-full bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
                 >
                   تسجيل
                 </button>
