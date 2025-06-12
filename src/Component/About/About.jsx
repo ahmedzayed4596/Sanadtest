@@ -70,7 +70,7 @@ export default function About() {
                   </div>
                 </div>
 
-                <button className="w-fit sm:w-fit px-5 py-2 bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out rounded-lg shadow justify-center items-center flex">
+                <button className="w-fit sm:w-fit px-5 py-2 bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer active:opacity-75 transition-colors duration-200 ease-in-out rounded-lg shadow justify-center items-center flex">
                   تواصل معنا
                 </button>
               </div>
@@ -78,7 +78,6 @@ export default function About() {
           </div>
         </section>
       </div>
-      
     </>
   );
 }

@@ -4,15 +4,13 @@ import signupImg from "../../assets/singup.png";
 import { Link } from "react-router-dom";
 import back from "../../assets/back.jpeg";
 
-
 export default function Login() {
   return (
     <>
-        <div className="pt-40 px-7 h-screen bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center">
+      <div className="pt-40 px-7 h-screen bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2">
-
-             <div className="md:col-span-1 lg:block hidden">
+            <div className="md:col-span-1 lg:block hidden">
               <img
                 src={back}
                 height="500px"
@@ -43,7 +41,7 @@ export default function Login() {
                     إسم المستخدم :
                   </label>
                 </div>
-                
+
                 <div class="relative z-0 mb-5 group">
                   <input
                     required
@@ -59,14 +57,14 @@ export default function Login() {
                     كلمة السر :
                   </label>
                 </div>
-               
+
                 <div>
                   <p className="text-white my-4">
-                  ليس لدي حساب :{" "}
+                    ليس لدي حساب :{" "}
                     <span>
                       <Link
                         to={"/Register"}
-                        className="font-bold hover:text-[#fac337] hover:underline"
+                        className="font-bold active:opacity-75 hover:text-[#fac337] hover:underline"
                       >
                         سجل الان
                       </Link>
@@ -74,21 +72,30 @@ export default function Login() {
                   </p>
                 </div>
 
-          <div className="space-y-3 flex  ">
-  <input defaultChecked id="yellow-checkbox" type="checkbox" defaultValue className="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded-sm focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-  <label htmlFor="yellow-checkbox" className="ms-2 text-sm font-medium text-white">تذكرني</label>
-</div>
-
+                <div className="space-y-3 flex  ">
+                  <input
+                    defaultChecked
+                    id="yellow-checkbox"
+                    type="checkbox"
+                    defaultValue
+                    className="w-4 h-4 text-yellow-400 bg-gray-100 border-gray-300 rounded-sm focus:ring-yellow-500 dark:focus:ring-yellow-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  />
+                  <label
+                    htmlFor="yellow-checkbox"
+                    className="ms-2 text-sm font-medium text-white"
+                  >
+                    تذكرني
+                  </label>
+                </div>
 
                 <button
                   type="submit"
-                  className="text-white w-full bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
+                  className="text-white w-full active:opacity-75 bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
                 >
                   تسجيل الدخول
                 </button>
               </form>
             </div>
-           
           </div>
         </div>
       </div>

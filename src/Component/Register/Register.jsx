@@ -9,7 +9,9 @@ export default function Register() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2">
             <div className="col-span-1 self-center">
-              <h2 className=" text-green-500 my-4 text-center text-4xl font-serif ">
+              <h2
+                className={`text-green-700 animate-pulse w-fit mx-auto z-20 my-4 text-center font-bold text-4xl ${style.reg}`}
+              >
                 تسجيل جديد
               </h2>
               <form className="max-w-md mx-auto mt-5 px-3">
@@ -83,13 +85,19 @@ export default function Register() {
 
                 <button
                   type="submit"
-                  className="text-white bg-green-500 hover:bg-green-500/70 hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
+                  className="text-white bg-green-500 active:opacity-75 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
                 >
                   تسجيل
                 </button>
               </form>
               <h2 className="max-w-md mx-auto mt-5 text-white">
-                لديك حساب ؟ <Link  className="font-bold hover:text-amber-400 mx-2" to={'/singin'} >تسجيل الدخول</Link>
+                لديك حساب ؟{" "}
+                <Link
+                  className="font-bold active:opacity-75 hover:text-[#fac337] mx-2"
+                  to={"/Login"}
+                >
+                  تسجيل الدخول
+                </Link>
               </h2>
             </div>
             <div className="md:col-span-1 lg:block hidden">

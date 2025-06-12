@@ -42,7 +42,7 @@ export default function Home() {
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay="700"
-                    className="inline-flex mx-auto items-center text-white bg-[#07543a] hover:bg-[#07543a]/70 justify-center w-full px-5 py-3 gap-2 text-sm font-medium text-center rounded-lg sm:w-auto hover:cursor-pointer transition-colors duration-200 ease-in-out"
+                    className="inline-flex mx-auto items-center bg-green-500 hover:bg-[#fac337] font-bold hover:text-black active:opacity-75 justify-center w-full px-5 py-3 gap-2 text-sm  text-center rounded-lg sm:w-auto hover:cursor-pointer transition-colors duration-200 ease-in-out"
                   >
                     تصفح خدماتنا
                   </a>
@@ -68,7 +68,7 @@ export default function Home() {
         </div>
         <div className="absolute bottom-0 left-0 w-full h-1 z-40 bg-gradient-to-l from-yellow-200 via-yellow-400 to-yellow-600"></div>
       </section>
-      <About/>
+      <About />
     </>
   );
 }
