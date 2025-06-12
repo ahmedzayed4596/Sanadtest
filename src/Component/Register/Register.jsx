@@ -89,7 +89,7 @@ export default function Register() {
                 </button>
               </form>
               <h2 className="max-w-md mx-auto mt-5 text-white">
-                لديك حساب ؟ <Link  className="font-bold hover:text-amber-400 mx-2" to={'/singin'} >تسجيل الدخول</Link>
+                لديك حساب ؟ <Link  className="font-bold hover:text-amber-400 mx-2" to={'/login'} >تسجيل الدخول</Link>
               </h2>
             </div>
             <div className="md:col-span-1 lg:block hidden">
