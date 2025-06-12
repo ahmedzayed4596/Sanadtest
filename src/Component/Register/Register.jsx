@@ -9,12 +9,10 @@ export default function Register() {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2">
             <div className="col-span-1 self-center">
-              <h2
-                className={`text-green-700 animate-pulse w-fit mx-auto z-20 my-4 text-center font-bold text-4xl ${style.reg}`}
-              >
-                <span className="text-white">تسجيل</span> جديد
+              <h2 className=" text-green-500 my-4 text-center text-4xl font-serif ">
+                تسجيل جديد
               </h2>
-              <form className="max-w-md px-3 mx-auto mt-5">
+              <form className="max-w-md mx-auto mt-5">
                 <div class="relative z-0 mb-5 group">
                   <input
                     required
@@ -82,26 +80,17 @@ export default function Register() {
                     رقم الجوال :
                   </label>
                 </div>
-                <div>
-                  <p className="text-white my-4">
-                    هل لديك حساب :{" "}
-                    <span>
-                      <Link
-                        to={"/Login"}
-                        className="font-bold hover:text-[#fac337] hover:underline"
-                      >
-                        تسجيل دخول
-                      </Link>
-                    </span>
-                  </p>
-                </div>
+
                 <button
                   type="submit"
-                  className="text-white w-full bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
+                  className="text-white bg-green-500 hover:bg-green-500/70 hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
                 >
                   تسجيل
                 </button>
               </form>
+              <h2 className="max-w-md mx-auto mt-5 text-white">
+                لديك حساب ؟ <Link  className="font-bold hover:text-amber-400 mx-2" to={'/singin'} >تسجيل الدخول</Link>
+              </h2>
             </div>
             <div className="md:col-span-1 lg:block hidden">
               <img

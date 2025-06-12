@@ -1,4 +1,22 @@
-.a7a {
-    text-align: center;
-    color: aquamarine;
+.reg {
+position: relative;
+
+}
+
+.reg::after {
+content: '';
+position: absolute;
+bottom: -20px;
+left: 0;
+height: 70px;
+width: 113px;
+background-color: black;
+border-radius: 25px;
+transition: width 0.5s ease-in-out; 
+z-index: -1;
+}
+
+.reg:hover::after {
+width: 104%; 
+border-radius: 25px;
 }
