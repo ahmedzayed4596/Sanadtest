@@ -1,9 +1,84 @@
-import React, { useState } from 'react'
-import style from './About.module.css'
+import React, { useState } from "react";
+import style from "./About.module.css";
+import about1 from "../../assets/about1.jpeg";
+import about2 from "../../assets/about2.jpeg";
 
 export default function About() {
-    
-return <>
-    <h1>About Component</h1>
-</>
+  return (
+    <>
+      <div className="pt-30 px-4 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center h-screen">
+        <section className="py-16 sm:py-24 relative overflow-hidden">
+          <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
+            <div className="w-full grid gap-12 lg:grid-cols-2 grid-cols-1 items-center">
+              <div className="lg:grid sm:grid-cols-2 grid-cols-1 gap-6 order-last lg:order-first  hidden">
+                <div className="pt-12 sm:pt-24 flex justify-start sm:justify-end">
+                  <img
+                    className="rounded-xl object-cover w-full max-w-[320px]"
+                    src={about1}
+                    alt="About Us"
+                  />
+                </div>
+                <div className="sm:ml-0 ml-auto">
+                  <img
+                    className="rounded-xl object-cover w-full max-w-[320px]"
+                    src={about2}
+                    alt="About Us"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-col items-center lg:items-start gap-10">
+                <div className="flex flex-col gap-6 text-center lg:text-start">
+                  <h2 className="text-[#f0bb35] text-2xl sm:text-3xl md:text-4xl font-bold leading-snug">
+                    نحن شركة <span className="text-[#828c8b]">"سند" </span>
+                    للخدمات العامة
+                  </h2>
+                  <p className="text-gray-100 text-base sm:text-lg leading-relaxed">
+                    في مسيرتنا كمزوّد خدمات متكامل للشركات، لم نكن مجرّد جهة
+                    تنفيذ، بل شركاء حقيقيين في بناء النجاح. كل خدمة قدمناها كانت
+                    نابعة من فهم عميق لاحتياجات عملائنا، وحرص دائم على تقديم
+                    حلول فعالة ومخصصة تُسهم في رفع كفاءة أعمالهم. نؤمن أن النجاح
+                    لا يُبنى وحدنا، بل بصناعة علاقات متينة قائمة على الثقة
+                    والاحترافية والاستمرارية. ومن خلال فرقنا المتخصصة وخبراتنا
+                    المتراكمة، نسعى دائماً لتقديم قيمة مضافة حقيقية، تُمكّن
+                    عملاءنا من التركيز على أهدافهم، بينما نتولى نحن دعمهم
+                    بكفاءة، في كل خطوة من خطواتهم نحو النمو والتميّز.
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap justify-center lg:justify-start gap-10 sm:gap-10">
+                  <div className="flex flex-col items-center lg:items-start">
+                    <h3 className="text-[#f0bb35] text-3xl sm:text-4xl font-bold">
+                      8+
+                    </h3>
+                    <p className="text-white text-sm sm:text-base">
+                      سنوات من الخبرة
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center lg:items-start">
+                    <h4 className="text-[#f0bb35] text-3xl sm:text-4xl font-bold">
+                      60+
+                    </h4>
+                    <p className="text-white text-sm sm:text-base">
+                      من شركاء النجاح
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-center lg:items-start">
+                    <h4 className="text-[#f0bb35] text-3xl sm:text-4xl font-bold">
+                      52+
+                    </h4>
+                    <p className="text-white text-sm sm:text-base">عميل سعيد</p>
+                  </div>
+                </div>
+
+                <button className="w-fit sm:w-fit px-5 py-2 bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out rounded-lg shadow justify-center items-center flex">
+                  تواصل معنا
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+    </>
+  );
 }

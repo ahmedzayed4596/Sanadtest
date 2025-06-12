@@ -12,7 +12,7 @@ export default function Register() {
               <h2 className=" text-green-500 my-4 text-center text-4xl font-serif ">
                 تسجيل جديد
               </h2>
-              <form className="max-w-md mx-auto mt-5">
+              <form className="max-w-md mx-auto mt-5 px-3">
                 <div class="relative z-0 mb-5 group">
                   <input
                     required
@@ -103,6 +103,7 @@ export default function Register() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
     </>
   );
 }

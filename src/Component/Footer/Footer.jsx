@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-white z-50">
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
+        <div className="absolute bottom-0 left-0 w-full z-40 h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="self-center">
