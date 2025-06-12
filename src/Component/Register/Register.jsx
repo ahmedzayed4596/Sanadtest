@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import style from "./Register.module.css";
 import signupImg from "../../assets/singup.png";
+import { Link } from "react-router-dom";
 export default function Register() {
   return (
     <>
@@ -81,7 +82,19 @@ export default function Register() {
                     رقم الجوال :
                   </label>
                 </div>
-
+                <div>
+                  <p className="text-white mb-2">
+                    هل لديك حساب :{" "}
+                    <span>
+                      <Link
+                        to={"/Login"}
+                        className="font-bold hover:text-[#fac337] hover:underline"
+                      >
+                        تسجيل دخول
+                      </Link>
+                    </span>
+                  </p>
+                </div>
                 <button
                   type="submit"
                   className="text-white bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"

@@ -7,7 +7,7 @@ import Layout from "./Component/Layout/Layout";
 import About from "./Component/About/About";
 import Servcies from "./Component/Servcies/Servcies";
 import Contact from "./Component/Contact/Contact";
-import Singin from "./Component/Singin/Singin";
+import Login from "./Component/Login/Login";
 import Register from "./Component/Register/Register";
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         { path: "/Servcies", element: <Servcies></Servcies> },
         { path: "/Contact", element: <Contact></Contact> },
         { path: "/Register", element: <Register></Register> },
-        { path: "/Singin", element: <Singin></Singin> },
+        { path: "/Login", element: <Login></Login> },
       ],
     },
   ]);
