@@ -114,6 +114,7 @@ export default function Register() {
           </div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
     </>
   );
 }
