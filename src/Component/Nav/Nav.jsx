@@ -19,10 +19,12 @@ export default function Nav() {
               alt="Sanad Logo"
             />
           </Link>
+          
+         
           <div
             className={` ${
               isOpen ? "block" : "hidden"
-            } w-full lg:flex lg:w-auto `}
+            } w-full order-2 lg:flex lg:w-auto `}
           >
             <ul className="flex font-bold flex-col p-4 lg:p-0 mt-4  border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
               <li>
@@ -67,7 +69,24 @@ export default function Nav() {
               </li>
             </ul>
           </div>
-          <button
+
+          <div className="flex md:order-2 gap-2 space-x-3 lg:space-x-0">
+            <Link
+              to={"/Register"}
+              className="text-white bg-[#07543a] hover:bg-[#07543ab2] hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
+            >
+              إنشاء حساب
+            </Link>
+            <Link
+              to={"/Login"}
+              className="text-white bg-[#07543a] hover:bg-[#07543ab2] hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
+            >
+              تسجيل دخول
+            </Link>
+          </div>
+
+
+           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
             className="inline-flex md:order-2 items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden"
@@ -82,21 +101,6 @@ export default function Nav() {
               />
             </svg>
           </button>
-
-          <div className="flex md:order-1 gap-2 space-x-3 lg:space-x-0">
-            <Link
-              to={"/Register"}
-              className="text-white bg-[#07543a] hover:bg-[#07543ab2] hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
-            >
-              إنشاء حساب
-            </Link>
-            <Link
-              to={"/Login"}
-              className="text-white bg-[#07543a] hover:bg-[#07543ab2] hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
-            >
-              تسجيل دخول
-            </Link>
-          </div>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
       </nav>
