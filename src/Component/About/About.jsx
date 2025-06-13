@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import about1 from "../../assets/about1.jpeg";
 import about2 from "../../assets/about2.jpeg";
+import { FaBriefcase, FaHandshake, FaSmile } from "react-icons/fa";
 
 export default function About() {
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function About() {
                   data-aos-duration="500"
                   className="text-[#f0bb35] text-2xl sm:text-3xl md:text-4xl font-bold leading-snug"
                 >
-                  نحن شركة <span className="text-[#828c8b]">"سند"</span> للخدمات
+                  شركة <span className="text-[#828c8b]">"سند"</span> للخدمات
                   العامة
                 </h2>
                 <p
@@ -74,27 +75,35 @@ export default function About() {
                 data-aos-duration="900"
                 className="flex flex-wrap justify-center lg:justify-start gap-10"
               >
-                <div className="flex flex-col items-center lg:items-start">
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-start">
                   <h3 className="text-[#f0bb35] text-3xl sm:text-4xl font-bold">
                     8+
                   </h3>
                   <p className="text-white text-sm sm:text-base">
                     سنوات من الخبرة
                   </p>
+                  <hr className="w-full mt-2 text-[#f0bb35]"></hr>
+                  <FaBriefcase className="text-[#f0bb35] text-4xl mt-2" />
                 </div>
-                <div className="flex flex-col items-center lg:items-start">
+
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-start">
                   <h4 className="text-[#f0bb35] text-3xl sm:text-4xl font-bold">
                     60+
                   </h4>
                   <p className="text-white text-sm sm:text-base">
                     من شركاء النجاح
                   </p>
+                  <hr className="w-full mt-2 text-[#f0bb35]"></hr>
+                  <FaHandshake className="text-[#f0bb35] text-4xl mt-2" />
                 </div>
-                <div className="flex flex-col items-center lg:items-start">
+
+                <div className="flex flex-col items-center lg:items-start text-center lg:text-start">
                   <h4 className="text-[#f0bb35] text-3xl sm:text-4xl font-bold">
                     52+
                   </h4>
                   <p className="text-white text-sm sm:text-base">عميل سعيد</p>
+                  <hr className="w-full mt-2 text-[#f0bb35]"></hr>
+                  <FaSmile className="text-[#f0bb35] text-4xl mt-2" />
                 </div>
               </div>
               <button
