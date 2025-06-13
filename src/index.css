@@ -8,6 +8,11 @@
   font-family: "Cairo", sans-serif;
 }
 
+*::selection {
+  background-color: #fac337; 
+  color: black;              
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
