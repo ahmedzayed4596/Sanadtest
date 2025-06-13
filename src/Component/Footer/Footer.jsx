@@ -67,10 +67,7 @@ export default function Footer() {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-black sm:text-center">
               © 2025{" "}
-              <Link
-                to={"/"}
-                className="hover:underline hover:text-[#fac337]"
-              >
+              <Link to={"/"} className="hover:underline hover:text-[#fac337]">
                 Sanad™
               </Link>
               . All Rights Reserved.
@@ -79,13 +76,13 @@ export default function Footer() {
               <span className="flex gap-3 text-sm text-black sm:text-center">
                 © 2025
                 <p class="text-gray-500">
-                  Designed & Development by 
+                  Designed & Development by
                   <a
                     className="me-1 watermark font-bold text-black hover:text-[#fcc24c]"
                     href="https://wa.me/+966506794692"
                     target="_blank"
                   >
-                    A-M 
+                    A-M
                   </a>
                 </p>
               </span>

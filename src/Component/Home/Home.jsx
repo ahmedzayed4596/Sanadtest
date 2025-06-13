@@ -7,6 +7,8 @@ import logo2 from "../../assets/logo.png";
 import sanad from "../../assets/sanad.png";
 import About from "../About/About";
 import Servcies from "../Servcies/Servcies";
+import PartnerReviews from "../Partner/Partner";
+import Partner from "../Partner/Partner";
 
 const images = [back1, back, back1, back];
 
@@ -72,6 +74,7 @@ export default function Home() {
       </section>
       <About />
       <Servcies />
+      <Partner />
     </>
   );
 }
