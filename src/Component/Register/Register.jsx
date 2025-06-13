@@ -82,7 +82,15 @@ export default function Register() {
                     رقم الجوال :
                   </label>
                 </div>
-
+                <h2 className="max-w-md mx-auto my-5 text-white">
+                  لديك حساب ؟{" "}
+                  <Link
+                    className="font-bold active:opacity-75 hover:text-[#fac337] mx-2"
+                    to={"/Login"}
+                  >
+                    تسجيل الدخول
+                  </Link>
+                </h2>
                 <button
                   type="submit"
                   className="text-white bg-green-500 active:opacity-75 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
@@ -90,15 +98,6 @@ export default function Register() {
                   تسجيل
                 </button>
               </form>
-              <h2 className="max-w-md mx-auto mt-5 text-white">
-                لديك حساب ؟{" "}
-                <Link
-                  className="font-bold active:opacity-75 hover:text-[#fac337] mx-2"
-                  to={"/Login"}
-                >
-                  تسجيل الدخول
-                </Link>
-              </h2>
             </div>
             <div className="md:col-span-1 lg:block hidden">
               <img
