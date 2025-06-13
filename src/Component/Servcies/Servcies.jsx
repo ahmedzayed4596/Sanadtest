@@ -6,40 +6,72 @@ import absher from "../../assets/absher.png";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
+import zaka from "../../assets/zaka.png";
+import marka from "../../assets/marka.png";
+import qiwa from "../../assets/qiwa.png";
+import bldy from "../../assets/bldy.png";
+import muqeem from "../../assets/muqeem.png";
+import nakl from "../../assets/nakl.png";
+import mawared from "../../assets/mawared.png";
 
 export default function Servcies() {
   const services = [
     {
       title: "التأمينات الاجتماعية",
       icon: gosi,
-      description: "تسجيل الموظفين وربطهم بالتأمينات بسهولة.",
+      description:
+        "إدارة اشتراكات الموظفين وربطهم بالتأمينات الاجتماعية بشكل آلي ومنتظم.",
     },
     {
       title: "منصة أبشر",
       icon: absher,
-      description: "خدمات إلكترونية مرتبطة بالمواطنين والمقيمين.",
+      description:
+        "تنفيذ الخدمات الحكومية للمواطنين والمقيمين بسهولة مثل إصدار الإقامات وتجديدها.",
     },
     {
-      title: "إدارة العقود",
-      icon: gosi,
-      description: "توثيق ومتابعة العقود إلكترونيًا.",
+      title: "مقيم",
+      icon: muqeem,
+      description:
+        "خدمة إدارة بيانات المقيمين، إصدار تأشيرات الخروج والعودة، وتمديد الإقامات إلكترونيًا.",
     },
     {
-      title: "إصدار تأشيرات",
-      icon: absher,
-      description: "إصدار تأشيرات العمل بكل سهولة وسرعة.",
+      title: "بلدي",
+      icon: bldy,
+      description:
+        "إصدار الرخص البلدية والتصاريح المرتبطة بالأنشطة التجارية بكل سهولة.",
     },
     {
-      title: "الربط الحكومي",
-      icon: gosi,
-      description: "تكامل البيانات مع الجهات الرسمية.",
+      title: "هيئة الزكاة والضريبة والجمارك",
+      icon: zaka,
+      description:
+        "تقديم الإقرارات الضريبية وتحديث بيانات المنشأة والربط مع الفوترة الإلكترونية.",
     },
     {
-      title: "إدارة الموارد",
-      icon: absher,
-      description: "تحسين أداء فرق العمل وتتبع المهام.",
+      title: "المركز السعودي للأعمال",
+      icon: marka,
+      description:
+        "منصة موحدة لتأسيس ومتابعة الأعمال التجارية بشكل سريع ومتكامل.",
+    },
+    {
+      title: "قوى",
+      icon: qiwa,
+      description:
+        "إدارة علاقات العمل، العقود، والتأشيرات بشكل رقمي ومتوافق مع أنظمة وزارة الموارد البشرية.",
+    },
+    {
+      title: "الهيئة العامة للنقل",
+      icon: nakl,
+      description:
+        "إصدار وتجديد بطاقات تشغيل المركبات والأنشطة المرتبطة بقطاع النقل.",
+    },
+    {
+      title: "الموارد البشرية",
+      icon: mawared,
+      description:
+        "منصة لإدارة شؤون الموظفين والأنظمة الداخلية للمنشآت وتحقيق الامتثال لأنظمة العمل.",
     },
   ];
+
 
   const settings = {
     dots: false,
@@ -48,8 +80,8 @@ export default function Servcies() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 4000,
-    autoplaySpeed: 2000,
+    speed: 8000,
+    autoplaySpeed: 1,
     cssEase: "linear",
     responsive: [
       {
@@ -89,8 +121,8 @@ export default function Servcies() {
                   glareEnable={true}
                   glareMaxOpacity={0.15}
                 >
-                  <div className="bg-gradient-to-br from-green-900 to-green-700 text-white rounded-xl p-6 flex flex-col items-center shadow-lg hover:shadow-2xl transition duration-300 h-full">
-                    <div className="w-24 h-24 bg-[#f0bb35] rounded-full flex items-center justify-center overflow-hidden mb-4">
+                  <div className="border-2 border-[#fac337] text-white rounded-xl p-6 flex flex-col items-center shadow-lg hover:shadow-2xl transition duration-300 h-full">
+                    <div className="w-fit h-24  flex items-center justify-center overflow-hidden mb-4">
                       <img
                         src={service.icon}
                         alt={service.title}

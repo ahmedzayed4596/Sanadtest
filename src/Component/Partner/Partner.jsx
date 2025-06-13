@@ -34,12 +34,21 @@ export default function Partner() {
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[#fac337] mb-10">
             آراء شركاؤنا
           </h2>
-
-          <div className="grid gap-6 md:grid-cols-3 pt-16">
+          <p className="text-center text-white w-[80%] sm:w-[40%]  mx-auto text-lg mb-10">
+            نفتخر بشراكتنا مع نخبة من الشركات الرائدة في مختلف القطاعات، حيث
+            كانت تجاربهم معنا شهادة حقيقية على التزامنا بالجودة والاحترافية.
+            إليكم بعضًا من انطباعات شركائنا حول تجربتهم مع "سند".
+          </p>
+          <div
+            data-aos="flip-up"
+            data-aos-delay="500"
+            data-aos-duration="2000"
+            className="grid gap-6 md:grid-cols-3 pt-16"
+          >
             {partnerFeedback.map((partner, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center"
+                className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center  border border-[#fac337]"
               >
                 <img
                   src={partner.logo}

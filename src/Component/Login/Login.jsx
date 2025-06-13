@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./Login.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import signupImg from "../../assets/singup.png";
 import { Link } from "react-router-dom";
 import back from "../../assets/back.jpeg";
 
 export default function Login() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+    AOS.refresh();
+  }, []);
   return (
     <>
       <div className="pt-40 px-7 h-screen bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center">
@@ -26,7 +35,11 @@ export default function Login() {
                 <span className="text-white">تسجيل</span> الدخول
               </h2>
               <form className="max-w-md px-3 mx-auto mt-5">
-                <div class="relative z-0 mb-5 group">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="200"
+                  class="relative z-0 mb-5 group"
+                >
                   <input
                     required
                     type="text"
@@ -42,7 +55,11 @@ export default function Login() {
                   </label>
                 </div>
 
-                <div class="relative z-0 mb-5 group">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                  class="relative z-0 mb-5 group"
+                >
                   <input
                     required
                     type="password"
