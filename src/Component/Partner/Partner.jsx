@@ -1,17 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "./Partner.module.css";
 import { FaStar } from "react-icons/fa";
 import fayrouz from "../../assets/fayrouz.png";
 import shazrwan from "../../assets/shazrwan.png";
 import tech from "../../assets/tech.png";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import ace from "../../assets/ace.png";
+import abraj from "../../assets/abraj.webp";
+import { Link } from "react-router-dom";
+import { SlEye } from "react-icons/sl";
 
-const partnerFeedback = [
+
+
+export default function Partner() {
+
+  const partnerFeedback = [
   {
     name: "شركة C-Tech",
     feedback: "سعداء بالتعاون مع سند، خدمة ممتازة وفريق محترف.",
-    rating: 5,
+    rating: 3,
     logo: tech,
   },
   {
@@ -26,16 +32,19 @@ const partnerFeedback = [
     rating: 5,
     logo: fayrouz,
   },
+  {
+    name: "مؤسسة السنافي للمقاولات",
+    feedback: "تعاملت مع أكثر من مكتب قبل، لكن سند مختلفين. خدمتهم دقيقة، والتزامهم بالمواعيد شيء نادرة",
+    rating: 5,
+    logo: ace,
+  },
+  {
+    name: "شركة ابراج للمصاعد",
+    feedback: "سرعة في تنفيذ جميع التصاريح اللازمة",
+    rating: 4.5,
+    logo: abraj,
+  },
 ];
-
-export default function Partner() {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true, // Animates only once when in view
-    });
-    AOS.refresh(); // Refresh to catch new elements
-  }, []);
   return (
     <>
       <section className="bg-gray-50 py-40 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center">
@@ -49,37 +58,186 @@ export default function Partner() {
             إليكم بعضًا من انطباعات شركائنا حول تجربتهم مع "سند" .
           </p>
           <div
-            data-aos="flip-up"
+           
+            className="grid gap-6 md:grid-cols-5  pt-16"
+          >
+           
+             <div
+               data-aos="flip-left"
             data-aos-delay="500"
             data-aos-duration="2000"
-            className="grid gap-6 md:grid-cols-3 pt-16"
-          >
-            {partnerFeedback.map((partner, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-xl shadow-md p-4 flex flex-col items-center text-center  border border-[#fac337]"
+                
+                className={`bg-white relative rounded-xl overflow-hidden shadow-md p-4 flex flex-col justify-between items-center text-center  border border-[#fac337] ${style.main}`}
               >
                 <img
-                  src={partner.logo}
-                  alt={partner.name}
+                  src={partnerFeedback[0].logo}
+                  
                   className="w-36 h-36 object-contain mb-2"
                 />
                 <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                  {partner.name}
+                  {partnerFeedback[0].name}
                 </h3>
-                <p className="text-gray-600 mb-3">{partner.feedback}</p>
-                <div className="flex justify-center">
+                <p className="text-gray-600 mb-3">{partnerFeedback[0].feedback}</p>
+               <div className="flex justify-center">
                   {[...Array(5)].map((_, i) => (
                     <FaStar
                       key={i}
                       className={`h-5 w-5 ${
-                        i < partner.rating ? "text-yellow-400" : "text-gray-300"
+                        i < partnerFeedback[0].rating ? "text-yellow-400" : "text-gray-300"
                       }`}
                     />
                   ))}
+
+
+                  <div className={`bg-green-900/60 ${style.child} rounded-3xl m-4 absolute  flex flex-col justify-center`}>
+                  <h2 className="text-lg text-center text-white underline-offset-2 underline font-bold">بامكانك الانضمام الينا الان :</h2>
+                  <Link className="flex mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75  px-5 py-3 gap-2 text-sm  text-center rounded-lg w-fit sm:w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+          عرض جميع خدماتنا
+        </Link>
+                  </div>
                 </div>
               </div>
-            ))}
+             <div
+               data-aos="flip-left"
+            data-aos-delay="500"
+            data-aos-duration="2000"
+                
+                className={`bg-white relative rounded-xl overflow-hidden shadow-md p-4 flex flex-col justify-between items-center text-center  border border-[#fac337] ${style.main}`}
+              >
+                <img
+                  src={partnerFeedback[1].logo}
+                  
+                  className="w-36 h-36 object-contain mb-2"
+                />
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {partnerFeedback[1].name}
+                </h3>
+                <p className="text-gray-600 mb-3">{partnerFeedback[1].feedback}</p>
+               <div className="flex justify-center">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar
+                      key={i}
+                      className={`h-5 w-5 ${
+                        i < partnerFeedback[1].rating ? "text-yellow-400" : "text-gray-300"
+                      }`}
+                    />
+                  ))}
+
+
+                  <div className={`bg-green-900/60 ${style.child} rounded-3xl m-4 absolute  flex flex-col justify-center`}>
+                  <h2 className="text-lg text-center text-white underline-offset-2 underline font-bold">بامكانك الانضمام الينا الان :</h2>
+                  <Link className="flex mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75  px-5 py-3 gap-2 text-sm  text-center rounded-lg w-fit sm:w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+          عرض جميع خدماتنا
+        </Link>
+                  </div>
+                </div>
+              </div>
+             <div
+               data-aos="flip-left"
+            data-aos-delay="500"
+            data-aos-duration="2000"
+                
+                className={`bg-white relative rounded-xl overflow-hidden shadow-md p-4 flex flex-col justify-between items-center text-center  border border-[#fac337] ${style.main}`}
+              >
+                <img
+                  src={partnerFeedback[2].logo}
+                  
+                  className="w-36 h-36 object-contain mb-2"
+                />
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {partnerFeedback[2].name}
+                </h3>
+                <p className="text-gray-600 mb-3">{partnerFeedback[2].feedback}</p>
+               <div className="flex justify-center">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar
+                      key={i}
+                      className={`h-5 w-5 ${
+                        i < partnerFeedback[2].rating ? "text-yellow-400" : "text-gray-300"
+                      }`}
+                    />
+                  ))}
+
+
+                  <div className={`bg-green-900/60 ${style.child} rounded-3xl m-4 absolute  flex flex-col justify-center`}>
+                  <h2 className="text-lg text-center text-white underline-offset-2 underline font-bold">بامكانك الانضمام الينا الان :</h2>
+                  <Link className="flex mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75  px-5 py-3 gap-2 text-sm  text-center rounded-lg w-fit sm:w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+          عرض جميع خدماتنا
+        </Link>
+                  </div>
+                </div>
+              </div>
+             <div
+               data-aos="flip-left"
+            data-aos-delay="500"
+            data-aos-duration="2000"
+                
+                className={`bg-white relative rounded-xl overflow-hidden shadow-md p-4 flex flex-col justify-between items-center text-center  border border-[#fac337] ${style.main}`}
+              >
+                <img
+                  src={partnerFeedback[3].logo}
+                  
+                  className="w-36 h-36 object-contain mb-2"
+                />
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {partnerFeedback[3].name}
+                </h3>
+                <p className="text-gray-600 mb-3">{partnerFeedback[3].feedback}</p>
+               <div className="flex justify-center">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar
+                      key={i}
+                      className={`h-5 w-5 ${
+                        i < partnerFeedback[3].rating ? "text-yellow-400" : "text-gray-300"
+                      }`}
+                    />
+                  ))}
+
+
+                  <div className={`bg-green-900/60 ${style.child} rounded-3xl m-4 absolute  flex flex-col justify-center`}>
+                  <h2 className="text-lg text-center text-white underline-offset-2 underline font-bold">بامكانك الانضمام الينا الان :</h2>
+                  <Link className="flex mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75  px-5 py-3 gap-2 text-sm  text-center rounded-lg w-fit sm:w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+          عرض جميع خدماتنا
+        </Link>
+                  </div>
+                </div>
+              </div>
+             <div
+               data-aos="flip-left"
+            data-aos-delay="500"
+            data-aos-duration="2000"
+                
+                className={`bg-white relative rounded-xl overflow-hidden shadow-md p-4 flex flex-col justify-between items-center text-center  border border-[#fac337] ${style.main}`}
+              >
+                <img
+                  src={partnerFeedback[4].logo}
+                  
+                  className="w-36 h-36 object-contain mb-2"
+                />
+                <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                  {partnerFeedback[4].name}
+                </h3>
+                <p className="text-gray-600 mb-3">{partnerFeedback[4].feedback}</p>
+               <div className="flex justify-center">
+                  {[...Array(5)].map((_, i) => (
+                    <FaStar
+                      key={i}
+                      className={`h-5 w-5 ${
+                        i < partnerFeedback[4].rating ? "text-yellow-400" : "text-gray-300"
+                      }`}
+                    />
+                  ))}
+
+
+                  <div className={`bg-green-900/60 ${style.child} rounded-3xl m-4 absolute  flex flex-col justify-center`}>
+                  <h2 className="text-lg text-center text-white underline-offset-2 underline font-bold">بامكانك الانضمام الينا الان :</h2>
+                  <Link className="flex mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75  px-5 py-3 gap-2 text-sm  text-center rounded-lg w-fit sm:w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+          عرض جميع خدماتنا
+        </Link>
+                  </div>
+                </div>
+              </div>
+            
           </div>
         </div>
       </section>

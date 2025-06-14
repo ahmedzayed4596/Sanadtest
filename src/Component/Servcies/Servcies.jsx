@@ -107,26 +107,36 @@ export default function Servcies() {
         <h2 className="text-4xl sm:text-5xl text-center font-bold text-[#f0bb35] mb-4">
           خدماتنا في <span className="text-[#07543a]">سند</span>
         </h2>
-        <div className=" w-[90%] bg-gray-100 rounded-2xl  mx-auto">
-       
+        <p className="text-center text-gray-600 mb-10  mx-auto px-4 font-bold">
+          مجموعة متكاملة من الخدمات الذكية لدعم أعمالك وتسهيل الإجراءات.
+        </p>
 
-
-
-            <div className="slider-container">
-      <Slider {...settings}>
-       
-       <div className=" p-4">
-                <h2 className="text-center text-[#f0bb35] text-2xl my-3.5"> التأمينات الاجتماعية </h2>
-              <div className="bg-[#07543a] h-auto w-auto rounded-full">
-
-                <img src={gosi} className="w-full" alt="" />
-              </div>
-            </div>
-       <div className=" p-4">
-                <h2 className="text-center text-[#f0bb35] text-2xl my-3.5">خدمات أبشر </h2>
-              <div className="bg-[#07543a] rounded-full">
-
-                <img src={absher} className="w-full h-[100px]" alt="" />
+        <div className="w-[90%] mx-auto bg-white rounded-2xl shadow-xl px-4 py-8">
+          <Slider {...settings}>
+            {services.map((service, index) => (
+              <div key={index} className="p-4">
+                <Tilt
+                  tiltMaxAngleX={10}
+                  tiltMaxAngleY={10}
+                  glareEnable={true}
+                  glareMaxOpacity={0.15}
+                >
+                  <div className="border-2 border-[#fac337] text-white rounded-xl p-6 flex flex-col items-center shadow-lg hover:shadow-2xl transition duration-300 h-full">
+                    <div className="w-fit h-24  flex items-center justify-center overflow-hidden mb-4">
+                      <img
+                        src={service.icon}
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl text-green-800 font-bold text-center mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-center text-gray-600 font-bold">
+                      {service.description}
+                    </p>
+                  </div>
+                </Tilt>
               </div>
             ))}
           </Slider>
