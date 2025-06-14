@@ -6,6 +6,9 @@ import back1 from "../../assets/back1.jpeg";
 import logo2 from "../../assets/logo.png";
 import sanad from "../../assets/sanad.png";
 import About from "../About/About";
+import Servcies from "../Servcies/Servcies";
+import PartnerReviews from "../Partner/Partner";
+import Partner from "../Partner/Partner";
 
 const images = [back1, back, back1, back];
 
@@ -70,6 +73,8 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-1 z-40 bg-gradient-to-l from-yellow-200 via-yellow-400 to-yellow-600"></div>
       </section>
       <About />
+      <Servcies />
+      <Partner />
     </>
   );
 }

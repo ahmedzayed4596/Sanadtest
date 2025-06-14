@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./Register.module.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import signupImg from "../../assets/singup.png";
 import { Link } from "react-router-dom";
 export default function Register() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, // Animates only once when in view
+    });
+    AOS.refresh(); // Refresh to catch new elements
+  }, []);
   return (
     <>
       <div className="pt-40 px-7 h-screen bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center">
@@ -15,7 +24,11 @@ export default function Register() {
                 تسجيل جديد
               </h2>
               <form className="max-w-md mx-auto mt-5 px-3">
-                <div class="relative z-0 mb-5 group">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="100"
+                  class="relative z-0 mb-5 group"
+                >
                   <input
                     required
                     type="text"
@@ -30,7 +43,11 @@ export default function Register() {
                     إسم المستخدم :
                   </label>
                 </div>
-                <div class="relative z-0 mb-5 group">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                  class="relative z-0 mb-5 group"
+                >
                   <input
                     required
                     type="email"
@@ -45,7 +62,11 @@ export default function Register() {
                     البريد الإلكتروني :
                   </label>
                 </div>
-                <div class="relative z-0 mb-5 group">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  class="relative z-0 mb-5 group"
+                >
                   <input
                     required
                     type="password"
@@ -60,7 +81,11 @@ export default function Register() {
                     كلمة السر :
                   </label>
                 </div>
-                <div className="relative z-0 mb-5 group">
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                  className="relative z-0 mb-5 group"
+                >
                   <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-sm text-white">
                     +966
                   </span>
@@ -82,7 +107,15 @@ export default function Register() {
                     رقم الجوال :
                   </label>
                 </div>
-
+                <h2 className="max-w-md mx-auto my-5 text-white">
+                  لديك حساب ؟{" "}
+                  <Link
+                    className="font-bold active:opacity-75 hover:text-[#fac337] mx-2"
+                    to={"/Login"}
+                  >
+                    تسجيل الدخول
+                  </Link>
+                </h2>
                 <button
                   type="submit"
                   className="text-white bg-green-500 active:opacity-75 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
@@ -90,15 +123,6 @@ export default function Register() {
                   تسجيل
                 </button>
               </form>
-              <h2 className="max-w-md mx-auto mt-5 text-white">
-                لديك حساب ؟{" "}
-                <Link
-                  className="font-bold active:opacity-75 hover:text-[#fac337] mx-2"
-                  to={"/Login"}
-                >
-                  تسجيل الدخول
-                </Link>
-              </h2>
             </div>
             <div className="md:col-span-1 lg:block hidden">
               <img

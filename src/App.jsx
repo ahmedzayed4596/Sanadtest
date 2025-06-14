@@ -9,6 +9,7 @@ import Servcies from "./Component/Servcies/Servcies";
 import Contact from "./Component/Contact/Contact";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Register/Register";
+import Partner from "./Component/Partner/Partner";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
         { path: "/Contact", element: <Contact></Contact> },
         { path: "/Register", element: <Register></Register> },
         { path: "/Login", element: <Login></Login> },
+        { path: "/Partner", element: <Partner></Partner> },
       ],
     },
   ]);

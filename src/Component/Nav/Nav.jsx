@@ -5,12 +5,16 @@ import logo2 from "../../assets/sanad logo.png";
 import { Link, NavLink } from "react-router-dom";
 export default function Nav() {
   const [isOpen, setIsOpen] = useState(false);
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
   return (
     <>
       <nav className="bg-white shadow-2xl fixed w-full z-50 top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
             to={"/"}
+            onClick={handleLinkClick}
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             <img
@@ -28,6 +32,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/"}
+                  onClick={handleLinkClick}
                   className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   الرئيسية
@@ -36,6 +41,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/About"}
+                  onClick={handleLinkClick}
                   className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   من نحن
@@ -44,6 +50,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/Servcies"}
+                  onClick={handleLinkClick}
                   className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   خدماتنا
@@ -52,6 +59,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/Partner"}
+                  onClick={handleLinkClick}
                   className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   عملاؤنا
@@ -60,6 +68,7 @@ export default function Nav() {
               <li>
                 <NavLink
                   to={"/Contact"}
+                  onClick={handleLinkClick}
                   className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   تواصل معنا

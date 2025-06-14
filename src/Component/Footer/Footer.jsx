@@ -8,7 +8,6 @@ export default function Footer() {
   return (
     <>
       <footer className="bg-white z-50">
-        
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="self-center">
@@ -68,12 +67,9 @@ export default function Footer() {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-black sm:text-center">
               © 2025{" "}
-              <a
-                href="https://flowbite.com/"
-                className="hover:underline hover:text-[#fac337]"
-              >
+              <Link to={"/"} className="hover:underline hover:text-[#fac337]">
                 Sanad™
-              </a>
+              </Link>
               . All Rights Reserved.
             </span>
             <div>
@@ -82,7 +78,7 @@ export default function Footer() {
                 <p class="text-gray-500">
                   Designed & Development by
                   <a
-                    className="watermark font-bold text-black hover:text-[#fcc24c]"
+                    className="me-1 watermark font-bold text-black hover:text-[#fcc24c]"
                     href="https://wa.me/+966506794692"
                     target="_blank"
                   >
@@ -92,8 +88,9 @@ export default function Footer() {
               </span>
             </div>
             <div className="flex mt-4 sm:justify-center sm:mt-0">
-              <Link
-                to={"https://x.com/sanadofficial11/"}
+              <a
+                target="_blank"
+                href="https://x.com/sanadofficial11/"
                 className="text-black  hover:text-[#fac337] ms-5"
               >
                 <svg
@@ -134,9 +131,10 @@ export default function Footer() {
                 </svg>
 
                 <span className="sr-only">X page</span>
-              </Link>
-              <Link
-                to={"https://www.instagram.com/sanadofficial11/"}
+              </a>
+              <a
+                target="_blank"
+                href="https://www.instagram.com/sanadofficial11/"
                 className="text-black  hover:text-[#fac337] ms-5"
               >
                 <svg
@@ -191,9 +189,13 @@ export default function Footer() {
                   />
                 </svg>
                 <span className="sr-only">Instagram account</span>
-              </Link>
+              </a>
 
-              <a href="#" className="text-black hover:text-[#fac337] ms-5">
+              <a
+                href="#"
+                target="_blank"
+                className="text-black hover:text-[#fac337] ms-5"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 48 48"
