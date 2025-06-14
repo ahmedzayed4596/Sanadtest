@@ -12,6 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Partner() {
+  const [activeIndex, setActiveIndex] = useState(null);
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -72,7 +73,7 @@ export default function Partner() {
               className={`relative rounded-xl overflow-hidden shadow-md p-4 flex flex-col justify-between items-center text-center border border-[#fac337] group bg-white ${style.main}`}
             >
               {/* المحتوى الأساسي */}
-              <div className="z-10 transition duration-300 group-hover:blur-sm">
+              <div className="z-10 transition duration-300 group-hover:blur-sm ">
                 <img
                   src={partnerFeedback[0].logo}
                   className="w-36 h-36 mx-auto object-contain mb-2"
