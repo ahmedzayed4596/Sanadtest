@@ -4,29 +4,176 @@ import style from "./Contact.module.css";
 const Contact = () => {
   return (
     <>
-      <div className="flex flex-col lg:flex-row min-h-screen pt-32 text-white ">
-        <div className="w-full lg:w-1/2 p-8 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center rounded-lg text-black">
+      <div className="flex flex-col lg:flex-row  pt-32 text-white  ">
+        <div className="w-full m-10 mx-20 lg:w-[40%] p-8 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center rounded-lg text-black">
           <h2 className="text-3xl text-[#fac337] font-bold mb-6">
             كن على تواصل
           </h2>
           <div className="space-y-10 text-2xl">
             <div>
-              <p className="font-semibold text-white">Chat to us</p>
-              <p className="text-white">Our friendly team is here to help.</p>
-              <p className="text-[#fac337]">hello@paysphere.com</p>
+              <p className="text-white">فريقنا دائما هنا للمساعدة.</p>
+              <p className="text-[#fac337]">sanadcompany19@gmail.com</p>
             </div>
             <div>
-              <p className="font-semibold">Call us</p>
-              <p>Mon–Fri from 8am to 5pm</p>
-              <p>(+995) 555-55-55-55</p>
+              <p className="font-semibold text-[#fac337] text-3xl ">
+                تحدث معنا
+              </p>
+              <p className="text-white">نستقبل المكالمات من الحد إلى الخميس</p>
+              <p className="text-[#fac337]">(+966) 555-55-55-55</p>
             </div>
             <div>
-              <p className="font-semibold">Social media</p>
-              <div className="flex gap-3 text-2xl mt-1">
-                <i className="fab fa-facebook"></i>
-                <i className="fab fa-linkedin"></i>
-                <i className="fab fa-instagram"></i>
-                <i className="fab fa-twitter"></i>
+              <p className="text-3xl text-[#fac337] font-bold">وسائل التواصل</p>
+              <div className="text-black flex gap-3 text-2xl mt-12">
+                <div className="flex mt-8 sm:justify-center sm:mt-0">
+                  <a
+                    target="_blank"
+                    href="https://x.com/sanadofficial11/"
+                    className="text-black  hover:text-[#fac337] ms-5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="60px"
+                      height="60px"
+                      className="text-black hover:scale-125 transition duration-300 fill-current"
+                    >
+                      <g opacity=".3">
+                        <polygon
+                          fill="currentColor"
+                          fillRule="evenodd"
+                          points="16.002,19 6.208,5 8.255,5 18.035,19"
+                          clipRule="evenodd"
+                        />
+                        <polygon
+                          fill="currentColor"
+                          points="8.776,4 4.288,4 15.481,20 19.953,20 8.776,4"
+                        />
+                      </g>
+                      <polygon
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        points="10.13,12.36 11.32,14.04 5.38,21 2.74,21"
+                        clipRule="evenodd"
+                      />
+                      <polygon
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        points="20.74,3 13.78,11.16 12.6,9.47 18.14,3"
+                        clipRule="evenodd"
+                      />
+                      <path
+                        fill="currentColor"
+                        d="M8.255,5l9.779,14h-2.032L6.208,5H8.255 M9.298,3h-6.93l12.593,18h6.91L9.298,3L9.298,3z"
+                      />
+                    </svg>
+
+                    <span className="sr-only">X page</span>
+                  </a>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/sanadofficial11/"
+                    className="text-black  hover:text-[#fac337] ms-5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 48 48"
+                      width="60px"
+                      height="60px"
+                      className="hover:scale-125 transition duration-300"
+                    >
+                      <radialGradient
+                        id="yOrnnhliCrdS2gy~4tD8ma"
+                        cx="19.38"
+                        cy="42.035"
+                        r="44.899"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0" stop-color="#fd5" />
+                        <stop offset=".328" stop-color="#ff543f" />
+                        <stop offset=".348" stop-color="#fc5245" />
+                        <stop offset=".504" stop-color="#e64771" />
+                        <stop offset=".643" stop-color="#d53e91" />
+                        <stop offset=".761" stop-color="#cc39a4" />
+                        <stop offset=".841" stop-color="#c837ab" />
+                      </radialGradient>
+                      <path
+                        fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
+                        d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+                      />
+                      <radialGradient
+                        id="yOrnnhliCrdS2gy~4tD8mb"
+                        cx="11.786"
+                        cy="5.54"
+                        r="29.813"
+                        gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset="0" stop-color="#4168c9" />
+                        <stop
+                          offset=".999"
+                          stop-color="#4168c9"
+                          stop-opacity="0"
+                        />
+                      </radialGradient>
+                      <path
+                        fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
+                        d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+                      />
+                      <path
+                        fill="#fff"
+                        d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+                      />
+                      <circle cx="31.5" cy="16.5" r="1.5" fill="#fff" />
+                      <path
+                        fill="#fff"
+                        d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
+                      />
+                    </svg>
+                    <span className="sr-only">Instagram account</span>
+                  </a>
+
+                  <a
+                    href="#"
+                    target="_blank"
+                    className="text-black hover:text-[#fac337] ms-5"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 48 48"
+                      width="60px"
+                      height="60px"
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      className="hover:scale-125 transition duration-300"
+                    >
+                      <path
+                        fill="#212121"
+                        fill-rule="evenodd"
+                        d="M10.904,6h26.191C39.804,6,42,8.196,42,10.904v26.191 C42,39.804,39.804,42,37.096,42H10.904C8.196,42,6,39.804,6,37.096V10.904C6,8.196,8.196,6,10.904,6z"
+                        clip-rule="evenodd"
+                      />
+                      <path
+                        fill="#ec407a"
+                        fill-rule="evenodd"
+                        d="M29.208,20.607c1.576,1.126,3.507,1.788,5.592,1.788v-4.011 c-0.395,0-0.788-0.041-1.174-0.123v3.157c-2.085,0-4.015-0.663-5.592-1.788v8.184c0,4.094-3.321,7.413-7.417,7.413 c-1.528,0-2.949-0.462-4.129-1.254c1.347,1.376,3.225,2.23,5.303,2.23c4.096,0,7.417-3.319,7.417-7.413L29.208,20.607L29.208,20.607 z M30.657,16.561c-0.805-0.879-1.334-2.016-1.449-3.273v-0.516h-1.113C28.375,14.369,29.331,15.734,30.657,16.561L30.657,16.561z M19.079,30.832c-0.45-0.59-0.693-1.311-0.692-2.053c0-1.873,1.519-3.391,3.393-3.391c0.349,0,0.696,0.053,1.029,0.159v-4.1 c-0.389-0.053-0.781-0.076-1.174-0.068v3.191c-0.333-0.106-0.68-0.159-1.03-0.159c-1.874,0-3.393,1.518-3.393,3.391 C17.213,29.127,17.972,30.274,19.079,30.832z"
+                        clip-rule="evenodd"
+                      />
+                      <path
+                        fill="#fff"
+                        fill-rule="evenodd"
+                        d="M28.034,19.63c1.576,1.126,3.507,1.788,5.592,1.788v-3.157 c-1.164-0.248-2.194-0.856-2.969-1.701c-1.326-0.827-2.281-2.191-2.561-3.788h-2.923v16.018c-0.007,1.867-1.523,3.379-3.393,3.379 c-1.102,0-2.081-0.525-2.701-1.338c-1.107-0.558-1.866-1.705-1.866-3.029c0-1.873,1.519-3.391,3.393-3.391 c0.359,0,0.705,0.056,1.03,0.159V21.38c-4.024,0.083-7.26,3.369-7.26,7.411c0,2.018,0.806,3.847,2.114,5.183 c1.18,0.792,2.601,1.254,4.129,1.254c4.096,0,7.417-3.319,7.417-7.413L28.034,19.63L28.034,19.63z"
+                        clip-rule="evenodd"
+                      />
+                      <path
+                        fill="#81d4fa"
+                        fill-rule="evenodd"
+                        d="M33.626,18.262v-0.854c-1.05,0.002-2.078-0.292-2.969-0.848 C31.445,17.423,32.483,18.018,33.626,18.262z M28.095,12.772c-0.027-0.153-0.047-0.306-0.061-0.461v-0.516h-4.036v16.019 c-0.006,1.867-1.523,3.379-3.393,3.379c-0.549,0-1.067-0.13-1.526-0.362c0.62,0.813,1.599,1.338,2.701,1.338 c1.87,0,3.386-1.512,3.393-3.379V12.772H28.095z M21.635,21.38v-0.909c-0.337-0.046-0.677-0.069-1.018-0.069 c-4.097,0-7.417,3.319-7.417,7.413c0,2.567,1.305,4.829,3.288,6.159c-1.308-1.336-2.114-3.165-2.114-5.183 C14.374,24.749,17.611,21.463,21.635,21.38z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span className="sr-only">Tiktok account</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -38,40 +185,38 @@ const Contact = () => {
             <div className="flex flex-col lg:flex-row gap-4">
               <input
                 type="text"
-                placeholder="First Name"
-                className="w-full p-3 bg-transparent border border-gray-600 rounded"
+                placeholder="الإسم"
+                className="w-full p-3 bg-transparent border border-[#fac337] text-black rounded"
               />
               <input
                 type="text"
-                placeholder="Last Name"
-                className="w-full p-3 bg-transparent border border-gray-600 rounded"
+                placeholder="إسم الشركة"
+                className="w-full p-3 bg-transparent border border-[#fac337] text-black rounded"
               />
             </div>
             <input
-              type="text"
-              placeholder="Company Name"
-              className="w-full p-3 bg-transparent border border-gray-600 rounded"
-            />
-            <input
               type="email"
               placeholder="Email"
-              className="w-full p-3 bg-transparent border border-gray-600 rounded"
+              className="w-full p-3 bg-transparent border border-[#fac337] text-black rounded"
             />
             <input
               type="text"
               placeholder="Phone Number"
-              className="w-full p-3 bg-transparent border border-gray-600 rounded"
+              className="w-full p-3 bg-transparent border border-[#fac337] text-black rounded"
             />
             <textarea
               placeholder="Tell us what we can help you with"
-              className="w-full p-3 bg-transparent border border-gray-600 rounded h-32"
+              className="w-full p-3 bg-transparent border border-[#fac337] text-black rounded h-32"
             ></textarea>
 
             <div className="flex items-start gap-2 text-sm">
-              <input type="checkbox" />
+              <input type="checkbox" className="text-green-400" />
               <label>
                 I'd like to receive more information and agree to the{" "}
-                <a href="#" className="text-blue-400 underline">
+                <a
+                  href="#"
+                  className="text-green-400 underline hover:text-[#fac337]"
+                >
                   Privacy Policy
                 </a>
                 .
