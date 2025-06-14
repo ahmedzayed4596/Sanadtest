@@ -99,7 +99,7 @@ export default function Partner() {
 
               {/* الطبقة العلوية */}
               <div
-                className={`bg-green-900/60 ${style.child} rounded-3xl m-4 absolute inset-0 flex flex-col justify-center items-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                className={`bg-green-900/80 ${style.child} rounded-3xl m-4 absolute inset-0 flex flex-col justify-center items-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
               >
                 <h2 className="text-lg text-[#fac337] underline-offset-2 underline font-bold">
                   بامكانك الانضمام الينا الان :
