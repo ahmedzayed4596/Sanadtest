@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import style from "./Partner.module.css";
 import { FaStar } from "react-icons/fa";
 import fayrouz from "../../assets/fayrouz.png";
 import shazrwan from "../../assets/shazrwan.png";
 import tech from "../../assets/tech.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const partnerFeedback = [
   {
@@ -27,6 +29,13 @@ const partnerFeedback = [
 ];
 
 export default function Partner() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true, // Animates only once when in view
+    });
+    AOS.refresh(); // Refresh to catch new elements
+  }, []);
   return (
     <>
       <section className="bg-gray-50 py-40 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center">
