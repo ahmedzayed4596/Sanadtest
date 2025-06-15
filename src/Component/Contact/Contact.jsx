@@ -9,21 +9,22 @@ const Contact = () => {
       <h2 className="text-4xl sm:text-5xl text-center font-bold text-[#f0bb35] mb-4">
           تواصل مع <span className="text-[#07543a]"> سند </span> للاستفسار وانجاز جميع الاعمال
         </h2>
-  <div className="grid container mx-auto md:grid-cols-12 gap-8">
-        <div className="col-span-5">
+
+  <div className="grid grid-cols-1 container items-center justify-center mx-auto sm:grid-cols-12 gap-8">
+        <div className="col-span-1 sm:col-span-12 md:col-span-5  ">
           <div className="p-5 space-y-3 ">
             <h3 className="text-[#07543a] text-center text-2xl font-extrabold mb-5">
 فريقنا موجود دائما من اجل اعمالك 
 </h3>
-<div className="grid gap-3 grid-cols-1 sm:grid-cols-2">
-  <div className=" cart border-2 border-[#fac337] rounded-lg hover:bg-gray-400 duration-300 transition shadow-xl p-4">
+<div className="grid gap-3 grid-cols-1 text-center sm:grid-cols-2">
+  <div className="col-span-2 sm:col-span-1 cart border-2 border-[#fac337] rounded-lg hover:bg-gray-400 duration-300 transition shadow-xl p-4">
 
   <h3 className="flex gap-2 items-center text-[#f0bb35] text-lg font-bold" > <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" className="fill-black" clip-rule="evenodd" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22ZM8 13.25C7.58579 13.25 7.25 13.5858 7.25 14C7.25 14.4142 7.58579 14.75 8 14.75H13.5C13.9142 14.75 14.25 14.4142 14.25 14C14.25 13.5858 13.9142 13.25 13.5 13.25H8ZM7.25 10.5C7.25 10.0858 7.58579 9.75 8 9.75H16C16.4142 9.75 16.75 10.0858 16.75 10.5C16.75 10.9142 16.4142 11.25 16 11.25H8C7.58579 11.25 7.25 10.9142 7.25 10.5Z" fill="#1C274C"/>
 </svg>البريد الخاص بنا : </h3>
 <h5 className="text-2xl text-[#07543a] font-extrabold "> sanad@company.com</h5>
 </div>
-  <div className=" cart rounded-lg border-2 border-[#fac337] hover:bg-gray-400 duration-300 transition shadow-xl p-4">
+  <div className="col-span-2 sm:col-span-1 cart rounded-lg border-2 border-[#fac337] hover:bg-gray-400 duration-300 transition shadow-xl p-4">
 
   <h3 className="flex gap-2 items-center text-[#f0bb35] text-lg font-bold" > <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.5562 14.5477L15.1007 15.0272C15.1007 15.0272 14.0181 16.167 11.0631 13.0559C8.10812 9.94484 9.1907 8.80507 9.1907 8.80507L9.47752 8.50311C10.1841 7.75924 10.2507 6.56497 9.63424 5.6931L8.37326 3.90961C7.61028 2.8305 6.13596 2.68795 5.26145 3.60864L3.69185 5.26114C3.25823 5.71766 2.96765 6.30945 3.00289 6.96594C3.09304 8.64546 3.81071 12.259 7.81536 16.4752C12.0621 20.9462 16.0468 21.1239 17.6763 20.9631C18.1917 20.9122 18.6399 20.6343 19.0011 20.254L20.4217 18.7584C21.3806 17.7489 21.1102 16.0182 19.8833 15.312L17.9728 14.2123C17.1672 13.7486 16.1858 13.8848 15.5562 14.5477Z" fill="#1C274C"/>
@@ -32,7 +33,7 @@ const Contact = () => {
 </svg> رقم الجوال : </h3>
 <h5 className="text-2xl text-[#07543a] font-extrabold "> 96655555555</h5>
 </div>
-  <div className=" cart rounded-lg border-2 shadow-2xl border-[#fac337]  duration-300 transition col-span-2 flex justify-evenly      p-4">
+  <div className="col-span-2 sm: cart rounded-lg border-2 shadow-2xl border-[#fac337]  duration-300 transition flex justify-evenly      p-4">
 
 <a
                     target="_blank"
@@ -186,7 +187,7 @@ const Contact = () => {
 </div>
           </div>
         </div>
-        <div className="col-span-7 m-3">
+        <div className="col-span-1 sm:col-span-12 md:col-span-7 mx-3">
           <div className="p-5 bg-[#07543a] rounded-2xl">
             <h2 className="text-center text-[#fac337] text-2xl font-extrabold">ارسل طلبك الان : </h2>
 
@@ -274,6 +275,7 @@ const Contact = () => {
 
         </div>
       </div>
+
       </div>
 
 
