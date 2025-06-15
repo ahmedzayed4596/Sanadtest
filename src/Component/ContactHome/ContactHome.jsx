@@ -5,8 +5,8 @@ import vision from '../../assets/vision.png'
 export default function ContactHome() {
     
 return <>
-    <div className='grid grid-cols-12 '>
-        <div className="col-span-8 space-y-5 self-center">
+    <div className='grid  sm:grid-cols-12 '>
+        <div className="sm:col-span-8 space-y-5 self-center">
             <h3 className='text-3xl text-white font-bold'>للتواصل معك من قبل <span className='text-[#fac337] font-extrabold'>سند</span></h3>
             <h4 className='text-white text-xl'>أضف حسابك الآن وكن من أوائل العملاء الذين يستفيدون من كل جديد!</h4>
             <h4 className='text-white text-xl'>احصل على مزايا خاصة مصممة لتناسب احتياجاتك وتفضيلاتك واستمتع بخصومات حصرية لا تُقدّم إلا للأعضاء.</h4>
@@ -32,8 +32,8 @@ return <>
 
 
         </div>
-        <div className="col-span-4 p-4 ">
-            <img src={vision} className='w-full p-4 drop-shadow-2xl drop-shadow-amber-300 ' alt="" />
+        <div className="hidden sm:block sm:col-span-4 p-4 ">
+            <img src={vision} className='w-full p-4  ' alt="" />
         </div>
         
     </div>
