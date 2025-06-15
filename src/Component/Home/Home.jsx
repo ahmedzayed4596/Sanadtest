@@ -9,6 +9,7 @@ import About from "../About/About";
 import Servcies from "../Servcies/Servcies";
 import PartnerReviews from "../Partner/Partner";
 import Partner from "../Partner/Partner";
+import ContactHome from "../ContactHome/ContactHome";
 
 const images = [back1, back, back1, back];
 
@@ -75,6 +76,9 @@ export default function Home() {
       <About />
       <Servcies />
       <Partner />
+      <div className="container mx-auto bg-[#07543a] px-4 py-7 rounded-4xl my-11">
+        <ContactHome />
+      </div>
     </>
   );
 }
