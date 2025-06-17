@@ -21,7 +21,7 @@ const ChatIcon = () => {
       {/* أيقونة الشات */}
       <button
         onClick={() => setOpen(!open)}
-        className="fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-[#f0bb35] w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-50"
+        className="animate-bounce hover:animate-none transition-colors duration-200 ease-in-out fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-[#f0bb35] w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-50"
       >
         <MessageCircle size={26} />
       </button>
