@@ -3,6 +3,7 @@ import style from "./Layout.module.css";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
+import ChatIcon from "../ChatIcon/ChatIcon";
 
 export default function Layout() {
   return (
@@ -11,6 +12,7 @@ export default function Layout() {
       <div>
         <Outlet />
       </div>
+      <ChatIcon/>
       <Footer />
     </>
   );
