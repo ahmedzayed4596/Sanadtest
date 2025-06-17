@@ -141,7 +141,7 @@ export default function Servcies() {
             ))}
           </Slider>
         </div>
-        <Link className="flex mx-auto mt-10 bg-[#07543a] hover:bg-[#fac337] text-white font-bold hover:text-black active:opacity-75  px-5 py-3 gap-2 text-sm  text-center rounded-lg w-fit sm:w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+        <Link to={'/allservcies'} className="flex mx-auto mt-10 bg-[#07543a] hover:bg-[#fac337] text-white font-bold hover:text-black active:opacity-75  px-5 py-3 gap-2 text-sm  text-center rounded-lg w-fit sm:w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
           عرض جميع خدماتنا
         </Link>
       </div>

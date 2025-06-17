@@ -10,6 +10,7 @@ import Contact from "./Component/Contact/Contact";
 import Login from "./Component/Login/Login";
 import Register from "./Component/Register/Register";
 import Partner from "./Component/Partner/Partner";
+import AllServcies from "./Component/AllServcies/AllServcies";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,6 +25,7 @@ function App() {
         { path: "/Register", element: <Register></Register> },
         { path: "/Login", element: <Login></Login> },
         { path: "/Partner", element: <Partner></Partner> },
+        { path: "/allservcies", element: <AllServcies></AllServcies> },
       ],
     },
   ]);

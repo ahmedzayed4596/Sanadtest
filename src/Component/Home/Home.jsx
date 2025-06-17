@@ -16,6 +16,7 @@ import About from "../About/About";
 import Servcies from "../Servcies/Servcies";
 import Partner from "../Partner/Partner";
 import ContactHome from "../ContactHome/ContactHome";
+import { Link } from "react-router-dom";
 
 const imagesPC = [back1, back, back2]; // صور الكمبيوتر
 const imagesMobile = [backm1, backm2, backm3]; // صور الموبايل
@@ -52,15 +53,15 @@ export default function Home() {
                   className="inline-block mb-2 max-w-56 mx-auto"
                 />
                 <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4 mt-5 justify-center">
-                  <a
-                    href="#quotation"
+                  <Link
+                    to="/allservcies"
                     data-aos="fade-up"
                     data-aos-duration="750"
                     data-aos-delay="500"
                     className="inline-flex items-center bg-[#07543a] hover:bg-[#fac337] font-bold hover:text-black active:opacity-75 justify-center w-full px-5 py-3 gap-2 text-sm text-center rounded-lg sm:w-auto cursor-pointer transition-colors duration-200 ease-in-out mx-auto"
                   >
                     تصفح خدماتنا
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
