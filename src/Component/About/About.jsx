@@ -17,7 +17,7 @@ export default function About() {
 
   return (
     <>
-      <div className="pt-20 px-4 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-cover bg-center">
+      <div className="pt-20 px-4 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-fixed sm:bg-cover bg-center">
         <section className="py-16 sm:py-24 relative overflow-hidden">
           <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">
             <div className="w-full grid gap-12 lg:grid-cols-2 grid-cols-1 items-center">
@@ -26,7 +26,7 @@ export default function About() {
                   <img
                     data-aos="flip-left"
                     data-aos-duration="1000"
-                    data-aos-delay="500"
+                    data-aos-delay="300"
                     className="rounded-xl object-cover w-full max-w-[320px]"
                     src={about1}
                     alt="About Us"
@@ -36,7 +36,7 @@ export default function About() {
                   <img
                     data-aos="flip-right"
                     data-aos-duration="1000"
-                    data-aos-delay="700"
+                    data-aos-delay="500"
                     className="rounded-xl object-cover w-full max-w-[320px]"
                     src={about2}
                     alt="About Us"
@@ -47,7 +47,7 @@ export default function About() {
                 <div className="flex flex-col gap-6 text-center lg:text-start">
                   <h2
                     data-aos="fade-up"
-                    data-aos-delay="200"
+                    data-aos-delay="100"
                     data-aos-duration="500"
                     className="text-[#f0bb35] text-2xl sm:text-3xl md:text-4xl font-bold leading-snug"
                   >
@@ -73,7 +73,7 @@ export default function About() {
                 </div>
                 <div
                   data-aos="fade-up"
-                  data-aos-delay="600"
+                  data-aos-delay="300"
                   data-aos-duration="900"
                   className="flex flex-wrap justify-center lg:justify-start gap-10"
                 >
@@ -110,7 +110,7 @@ export default function About() {
                 </div>
                 <button
                   data-aos="fade-up"
-                  data-aos-delay="800"
+                  data-aos-delay="400"
                   data-aos-duration="1100"
                   className="w-fit sm:w-fit px-5 py-2 bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer active:opacity-75 transition-colors duration-200 ease-in-out rounded-lg shadow justify-center items-center flex"
                 >
