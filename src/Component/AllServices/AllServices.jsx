@@ -1,116 +1,173 @@
 import React, { useState, useEffect } from "react";
-import style from "./AllServcies.module.css";
+import style from "./AllServices.module.css";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
-
 export default function Partner() {
-  const Servcies = [
-    // 🏢 خدمات السجل التجاري
-    { name: "فتح سجل تجاري" },
-    { name: "تجديد سجل تجاري" },
-    { name: "شطب سجل تجاري" },
-    { name: "تعديل بيانات السجل التجاري" },
-    { name: "إصدار سجل تجاري فرعي" },
-    { name: "تحويل سجل فردي إلى شركة" },
-    { name: "تأكيد السنوي للسجل" },
-    { name: "إصدار شهادة السجل التجاري" },
-    { name: "حجز اسم تجاري" },
-    { name: "تحويل ملكية السجل التجاري" },
-    { name: "إصدار سجل تجاري مهني" },
+  const Services = [
+    // 🏢 خدمات وزارة التجارة
+    { category: "وزارة التجارة", name: "تجديد سجل تجاري" },
+    { category: "وزارة التجارة", name: "فتح سجل تجاري" },
+    { category: "وزارة التجارة", name: "شطب سجل تجاري" },
+    { category: "وزارة التجارة", name: "تعديل بيانات السجل التجاري" },
+    { category: "وزارة التجارة", name: "إصدار سجل تجاري فرعي" },
+    { category: "وزارة التجارة", name: "تحويل سجل فردي إلى شركة" },
+    { category: "وزارة التجارة", name: "تأكيد السنوي للسجل" },
+    { category: "وزارة التجارة", name: "إصدار شهادة السجل التجاري" },
+    { category: "وزارة التجارة", name: "حجز اسم تجاري" },
+    { category: "وزارة التجارة", name: "تحويل ملكية السجل التجاري" },
+    { category: "وزارة التجارة", name: "إصدار سجل تجاري مهني" },
+    { category: "وزارة التجارة", name: "إصدار سجل تجاري للمستثمر الأجنبي" },
+    {
+      category: "وزارة التجارة",
+      name: "إصدار سجل تجاري إلكتروني (منصة معروف)",
+    },
+    { category: "وزارة التجارة", name: "التحقق من السجل التجاري" },
+    { category: "وزارة التجارة", name: "الربط بين الفروع الرئيسية والفرعية" },
+    { category: "وزارة التجارة", name: "تصفية شركة" },
 
     // 🏛️ خدمات البلدية (بلدي)
-    { name: "إصدار رخصة بلدية (رخصة محل)" },
-    { name: "تجديد رخصة بلدية" },
-    { name: "نقل ملكية رخصة بلدية" },
-    { name: "إلغاء رخصة بلدية" },
-    { name: "تعديل نشاط في رخصة بلدية" },
-    { name: "إصدار رخصة بناء" },
-    { name: "تجديد رخصة بناء" },
-    { name: "إصدار رخصة تسوير أرض" },
-    { name: "إصدار تصريح لوحات إعلانية" },
-    { name: "تحديث موقع النشاط التجاري" },
+    { category: "البلدية", name: "إصدار رخصة بلدية (رخصة محل)" },
+    { category: "البلدية", name: "تجديد رخصة بلدية" },
+    { category: "البلدية", name: "نقل ملكية رخصة بلدية" },
+    { category: "البلدية", name: "إلغاء رخصة بلدية" },
+    { category: "البلدية", name: "تعديل نشاط في رخصة بلدية" },
+    { category: "البلدية", name: "إصدار رخصة بناء" },
+    { category: "البلدية", name: "تجديد رخصة بناء" },
+    { category: "البلدية", name: "إصدار رخصة تسوير أرض" },
+    { category: "البلدية", name: "إصدار تصريح لوحات إعلانية" },
+    { category: "البلدية", name: "تحديث موقع النشاط التجاري" },
 
     // 👷‍♂️ خدمات وزارة الموارد البشرية
-    { name: "فتح ملف منشأة في وزارة العمل" },
-    { name: "إصدار رخص عمل" },
-    { name: "تجديد رخص عمل" },
-    { name: "نقل كفالة عامل" },
-    { name: "خروج نهائي لعامل" },
-    { name: "تحديث بيانات المنشأة" },
-    { name: "إصدار شهادة سعودة" },
-    { name: "تسجيل موظف سعودي" },
-    { name: "إلغاء عقد عامل" },
+    { category: "الموارد البشرية", name: "فتح ملف منشأة في وزارة العمل" },
+    { category: "الموارد البشرية", name: "إصدار رخص عمل" },
+    { category: "الموارد البشرية", name: "تجديد رخص عمل" },
+    { category: "الموارد البشرية", name: "نقل كفالة عامل" },
+    { category: "الموارد البشرية", name: "خروج نهائي لعامل" },
+    { category: "الموارد البشرية", name: "تحديث بيانات المنشأة" },
+    { category: "الموارد البشرية", name: "إصدار شهادة سعودة" },
+    { category: "الموارد البشرية", name: "تسجيل موظف سعودي" },
+    { category: "الموارد البشرية", name: "إلغاء عقد عامل" },
+    { category: "الموارد البشرية", name: "دعم توظيف السعوديين (هدف)" },
+    { category: "الموارد البشرية", name: "برنامج تمهير / دعم التدريب" },
+    { category: "الموارد البشرية", name: "دعم العمل عن بعد" },
+    { category: "الموارد البشرية", name: "دعم ريادة الأعمال" },
 
     // 🧾 خدمات التأمينات الاجتماعية
-    { name: "تسجيل منشأة في التأمينات" },
-    { name: "تسجيل موظف في التأمينات" },
-    { name: "تعديل أجر موظف في التأمينات" },
-    { name: "إلغاء اشتراك موظف" },
-    { name: "استخراج شهادة التأمينات" },
-    { name: "تقديم بلاغ إصابة عمل" },
+    { category: "التأمينات الاجتماعية", name: "تسجيل منشأة في التأمينات" },
+    { category: "التأمينات الاجتماعية", name: "تسجيل موظف في التأمينات" },
+    { category: "التأمينات الاجتماعية", name: "تعديل أجر موظف في التأمينات" },
+    { category: "التأمينات الاجتماعية", name: "إلغاء اشتراك موظف" },
+    { category: "التأمينات الاجتماعية", name: "استخراج شهادة التأمينات" },
+    { category: "التأمينات الاجتماعية", name: "تقديم بلاغ إصابة عمل" },
 
     // 🛂 خدمات الجوازات (أبشر / مقيم)
-    { name: "إصدار إقامة جديدة" },
-    { name: "تجديد إقامة" },
-    { name: "إصدار تأشيرة خروج وعودة" },
-    { name: "إصدار تأشيرة خروج نهائي" },
-    { name: "نقل خدمات (نقل كفالة)" },
-    { name: "طباعة إقامة" },
-    { name: "إلغاء تأشيرة خروج وعودة" },
-    { name: "نقل معلومات جواز" },
+    { category: "أبشر و مقيم", name: "إصدار إقامة جديدة" },
+    { category: "أبشر و مقيم", name: "تجديد إقامة" },
+    { category: "أبشر و مقيم", name: "إصدار تأشيرة خروج وعودة" },
+    { category: "أبشر و مقيم", name: "إصدار تأشيرة خروج نهائي" },
+    { category: "أبشر و مقيم", name: "نقل خدمات (نقل كفالة)" },
+    { category: "أبشر و مقيم", name: "طباعة إقامة" },
+    { category: "أبشر و مقيم", name: "إلغاء تأشيرة خروج وعودة" },
+    { category: "أبشر و مقيم", name: "نقل معلومات جواز" },
+    { category: "أبشر و مقيم", name: "إصدار تفويض سفر" },
+    { category: "أبشر و مقيم", name: "إسقاط المركبة" },
+    { category: "أبشر و مقيم", name: "إصدار أو تجديد رخصة قيادة" },
+    { category: "أبشر و مقيم", name: "نقل ملكية مركبة" },
+    { category: "أبشر و مقيم", name: "الاستعلام عن المخالفات" },
+    { category: "أبشر و مقيم", name: "حجز موعد مرور" },
 
     // 💰 خدمات الزكاة والضريبة (ZATCA)
-    { name: "تسجيل في ضريبة القيمة المضافة" },
-    { name: "إلغاء تسجيل في ضريبة القيمة المضافة" },
-    { name: "تقديم إقرار ضريبي" },
-    { name: "إصدار شهادة الزكاة والدخل" },
-    { name: "التسجيل في الفوترة الإلكترونية (فاتورة)" },
-    { name: "تعديل بيانات ضريبية" },
-    { name: "فتح ملف ضريبي جديد" },
+    { category: "الزكاة و الضريبة", name: "تسجيل في ضريبة القيمة المضافة" },
+    {
+      category: "الزكاة و الضريبة",
+      name: "إلغاء تسجيل في ضريبة القيمة المضافة",
+    },
+    { category: "الزكاة و الضريبة", name: "تقديم إقرار ضريبي" },
+    { category: "الزكاة و الضريبة", name: "إصدار شهادة الزكاة والدخل" },
+    {
+      category: "الزكاة و الضريبة",
+      name: "التسجيل في الفوترة الإلكترونية (فاتورة)",
+    },
+    { category: "الزكاة و الضريبة", name: "تعديل بيانات ضريبية" },
+    { category: "الزكاة و الضريبة", name: "فتح ملف ضريبي جديد" },
+    { category: "الزكاة و الضريبة", name: "إصدار سجل ضريبي إلكتروني" },
+    { category: "الزكاة و الضريبة", name: "فتح ملف ضريبي للمؤسسة" },
 
     // ⚖️ خدمات وزارة العدل (ناجز)
-    { name: "توثيق عقد شركة" },
-    { name: "إصدار وكالة إلكترونية" },
-    { name: "فسخ وكالة إلكترونية" },
-    { name: "توثيق عقد زواج" },
-    { name: "توثيق عقد طلاق" },
-    { name: "توثيق ملكية عقار" },
+    { category: "وزارة العدل (ناجز)", name: "توثيق عقد شركة" },
+    { category: "وزارة العدل (ناجز)", name: "إصدار وكالة إلكترونية" },
+    { category: "وزارة العدل (ناجز)", name: "فسخ وكالة إلكترونية" },
+    { category: "وزارة العدل (ناجز)", name: "توثيق عقد زواج" },
+    { category: "وزارة العدل (ناجز)", name: "توثيق عقد طلاق" },
+    { category: "وزارة العدل (ناجز)", name: "توثيق ملكية عقار" },
+    { category: "وزارة العدل (ناجز)", name: "الاستعلام عن القضايا" },
+    { category: "وزارة العدل (ناجز)", name: "تقديم طلب تنفيذ" },
+    { category: "وزارة العدل (ناجز)", name: "إصدار صك بدل فاقد" },
 
     // 📦 خدمات البريد (سبل)
-    { name: "إصدار عنوان وطني" },
-    { name: "تعديل العنوان الوطني" },
-    { name: "إصدار صندوق بريد تجاري" },
-    { name: "تحديث بيانات سبل" },
+    { category: "سبل", name: "إصدار عنوان وطني" },
+    { category: "سبل", name: "تعديل العنوان الوطني" },
+    { category: "سبل", name: "إصدار صندوق بريد تجاري" },
+    { category: "سبل", name: "تحديث بيانات سبل" },
 
     // 🧠 خدمات استشارية وتجارية عامة
-    { name: "فتح ملف ضريبي للمؤسسة" },
-    { name: "إصدار سجل ضريبي إلكتروني" },
-    { name: "إعداد عقود تأسيس الشركات" },
-    { name: "إصدار سجل منشأة أجنبية" },
-    { name: "إلغاء نشاط تجاري" },
-    { name: "تحويل مؤسسة إلى شركة" },
+    { category: "خدمات عامة", name: "إعداد عقود تأسيس الشركات" },
+    { category: "خدمات عامة", name: "إصدار سجل منشأة أجنبية" },
+    { category: "خدمات عامة", name: "إلغاء نشاط تجاري" },
+    { category: "خدمات عامة", name: "تحويل مؤسسة إلى شركة" },
+
+    // 🧪 خدمات هيئة الغذاء والدواء
+    { category: "الغذاء و الدواء", name: "تسجيل منتج تجميلي" },
+    { category: "الغذاء و الدواء", name: "تسجيل منشأة غذائية" },
+    { category: "الغذاء و الدواء", name: "ترخيص مستودع دوائي" },
+    { category: "الغذاء و الدواء", name: "تسجيل دواء مستورد" },
+
+    // 🌾 خدمات وزارة البيئة والمياه والزراعة
+    { category: "البيئة و الزراعة", name: "إصدار ترخيص زراعي" },
+    { category: "البيئة و الزراعة", name: "إصدار ترخيص نحال" },
+    { category: "البيئة و الزراعة", name: "إصدار سجل بيطري" },
+    { category: "البيئة و الزراعة", name: "إصدار رخصة حفر بئر" },
+    { category: "البيئة و الزراعة", name: "التقديم على دعم ريف" },
+
+    // 🏫 خدمات وزارة التعليم
+    { category: "وزارة التعليم", name: "معادلة الشهادات" },
+    { category: "وزارة التعليم", name: "التقديم على الابتعاث" },
+    { category: "وزارة التعليم", name: "إصدار شهادة بدل فاقد" },
+
+    // 📈 خدمات هيئة السوق المالية / الاستثمار
+    { category: "هيئة الاستثمار", name: "التقديم على ترخيص منشأة مالية" },
+    { category: "هيئة الاستثمار", name: "التقديم على ترخيص استثمار أجنبي" },
+    { category: "هيئة الاستثمار", name: "تقديم تقارير الإفصاح" },
+
+    // 👮‍♂️ خدمات النيابة العامة / الأمن العام
+    { category: "وزارة التعليم", name: "تقديم بلاغ إلكتروني" },
+    { category: "وزارة التعليم", name: "الاستعلام عن البلاغات" },
+    { category: "وزارة التعليم", name: "تقديم اعتراض" },
+    { category: "وزارة التعليم", name: "متابعة منع السفر" },
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredServices, setFilteredServices] = useState(Servcies);
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const filtered = Services.filter((service) => {
+    const matchesCategory =
+      selectedCategory === "" || service.category === selectedCategory;
+    const matchesSearch = service.name
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
     AOS.refresh();
   }, []);
-
-  useEffect(() => {
-    const filtered = Servcies.filter((service) =>
-      service.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setFilteredServices(filtered);
-  }, [searchTerm]);
-
   return (
     <>
+      
+    
       <section className="bg-gray-50 py-40 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-fixed sm:bg-cover bg-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center text-[#fac337] mb-10">
@@ -121,7 +178,30 @@ export default function Partner() {
           </p>
 
           {/* 🟩 مربع البحث */}
-          <div className="max-w-md mx-auto">
+          <div className="max-w-md mx-auto space-y-4">
+            {/* قائمة الفئات */}
+            <select
+              className="block w-full p-3 text-sm border border-gray-300 rounded-lg bg-gray-50 focus:ring-green-500 focus:border-green-500"
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+            >
+              <option value="">الكل</option>
+              <option value="وزارة التعليم">وزارة التعليم</option>
+              <option value="هيئة الاستثمار">هيئة الاستثمار</option>
+              <option value="البيئة و الزراعة">البيئة و الزراعة</option>
+              <option value="الغذاء و الدواء">الغذاء و الدواء</option>
+              <option value="خدمات عامة">خدمات عامة</option>
+              <option value="سبل">سبل</option>
+              <option value="وزارة العدل (ناجز)">وزارة العدل (ناجز)</option>
+              <option value="الزكاة و الضريبة">الزكاة و الضريبة</option>
+              <option value="أبشر و مقيم">أبشر و مقيم</option>
+              <option value="التأمينات الاجتماعية">التأمينات الاجتماعية</option>
+              <option value="الموارد البشرية">الموارد البشرية</option>
+              <option value="البلدية">البلدية</option>
+              <option value="وزارة التجارة">وزارة التجارة</option>
+            </select>
+
+            {/* مربع البحث */}
             <div className="relative">
               <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
                 <svg
@@ -153,8 +233,8 @@ export default function Partner() {
 
           {/* 🟨 عرض الخدمات */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:grid-cols-4 lg:grid-cols-5 pt-16">
-            {filteredServices.length > 0 ? (
-              filteredServices.map((service, index) => (
+            {filtered.length > 0 ? (
+              filtered.map((service, index) => (
                 <div
                   key={index}
                   data-aos="fade-up"
@@ -394,7 +474,6 @@ export default function Partner() {
                   <div
                     className={`bg-green-900/80 ${style.child} rounded-lg m-4 absolute inset-0 flex flex-col justify-center items-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
                   >
-                    
                     <Link className="mt-6 bg-[#fac337] hover:bg-white text-black hover:text-black px-5 py-2 text-sm rounded-lg transition-colors duration-200 ease-in-out">
                       طلب الخدمة
                     </Link>
