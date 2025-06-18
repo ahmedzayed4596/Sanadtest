@@ -10,7 +10,7 @@ export default function About() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true, // Animates only once when in view
+      once: false, // Animates only once when in view
     });
     AOS.refresh(); // Refresh to catch new elements
   }, []);
