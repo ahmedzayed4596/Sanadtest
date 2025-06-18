@@ -25,7 +25,7 @@ export default function Nav() {
           <Link
             to={"/"}
             onClick={handleLinkClick}
-            className="flex items-center space-x-3 rtl:space-x-reverse"
+            className="flex items-center space-x-3 "
           >
             <img
               src={logo}
@@ -34,16 +34,19 @@ export default function Nav() {
             />
           </Link>
           <div
-            className={` ${
-              isOpen ? "block" : "hidden"
-            } w-full order-2 lg:flex lg:w-auto `}
+            className={`
+    ${isOpen ? "block" : "hidden"}
+    absolute top-full left-0 w-full bg-white z-40
+    flex-col items-start p-4
+    lg:static lg:flex lg:flex-row lg:items-center lg:w-auto lg:p-0
+  `}
           >
-            <ul className="flex font-bold flex-col p-4 lg:p-0 mt-4  border border-gray-100 rounded-lg  lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
+            <ul className="flex font-bold flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
               <li>
                 <NavLink
                   to={"/"}
                   onClick={handleLinkClick}
-                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
+                  className="block  py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   الرئيسية
                 </NavLink>
@@ -87,33 +90,26 @@ export default function Nav() {
             </ul>
           </div>
 
+          {/* Right buttons */}
           <div className="flex md:order-2 gap-2 space-x-3 lg:space-x-0">
-
-            {userToken == null ? <>
-              <Link
-              to={"/Register"}
-              className="text-white active:opacity-75 bg-[#07543a] hover:bg-[#fac337] hover:text-black  hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
-            >
-              إنشاء حساب
-            </Link>
-           
-            <Link
-              to={"/Login"}
-              className="text-white active:opacity-75 bg-[#07543a] hover:bg-[#fac337] hover:text-black  hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
-            >
-              تسجيل دخول
-            </Link>
-            </> :   
-           
-<AvatarDropdown />
-
-
-
-
- }
-          
-
-          
+            {userToken == null ? (
+              <>
+                <Link
+                  to={"/Register"}
+                  className="text-white active:opacity-75 bg-[#07543a] hover:bg-[#fac337] hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
+                >
+                  إنشاء حساب
+                </Link>
+                <Link
+                  to={"/Login"}
+                  className="text-white active:opacity-75 bg-[#07543a] hover:bg-[#fac337] hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
+                >
+                  تسجيل دخول
+                </Link>
+              </>
+            ) : (
+              <AvatarDropdown />
+            )}
           </div>
 
           <button
