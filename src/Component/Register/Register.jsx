@@ -8,37 +8,28 @@ import { useFormik } from "formik";
 import axios from "axios";
 import { userContext } from "../../../Context/UserContext";
 export default function Register() {
-  const navigate = useNavigate()
-  const {userToken , setUserToken} = useContext(userContext)
+  const navigate = useNavigate();
+  const { userToken, setUserToken } = useContext(userContext);
 
+  async function handleSubmit(values) {
+    console.log(values);
 
-
- async function handleSubmit(values) {
-  console.log(values);
-  
     try {
       const src = await axios.post(
         "https://ecommerce.routemisr.com/api/v1/auth/signup",
         values
       );
       console.log(src.data);
-       localStorage.setItem('userToken' ,src.data.token ) 
-      navigate('/')
-      setUserToken(src.data.token)
-
-      
-     
-     
+      localStorage.setItem("userToken", src.data.token);
+      navigate("/");
+      setUserToken(src.data.token);
     } catch (error) {
       console.log(error);
-     
-    }finally {
-     
+    } finally {
     }
   }
 
-   const formik = useFormik({
-
+  const formik = useFormik({
     initialValues: {
       name: "",
       email: "",
@@ -49,11 +40,10 @@ export default function Register() {
     onSubmit: handleSubmit,
   });
 
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true, // Animates only once when in view
+      once: false, // Animates only once when in view
     });
     AOS.refresh(); // Refresh to catch new elements
   }, []);
@@ -68,17 +58,19 @@ export default function Register() {
               >
                 تسجيل جديد
               </h2>
-              <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto mt-5 px-3">
+              <form
+                onSubmit={formik.handleSubmit}
+                className="max-w-md mx-auto mt-5 px-3"
+              >
                 <div
                   data-aos="fade-up"
                   data-aos-delay="100"
                   className="relative z-0 mb-5 group"
                 >
                   <input
-                  value={formik.values.name}
+                    value={formik.values.name}
                     onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                    
+                    onBlur={formik.handleBlur}
                     type="text"
                     id="name"
                     name="name"
@@ -98,10 +90,9 @@ export default function Register() {
                   className="relative z-0 mb-5 group"
                 >
                   <input
-                                    value={formik.values.email}
-                                      onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                    
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                     type="email"
                     id="email"
                     name="email"
@@ -121,9 +112,9 @@ export default function Register() {
                   className="relative z-0 mb-5 group"
                 >
                   <input
-                                      value={formik.values.password}
-                                        onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
+                    value={formik.values.password}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                     type="password"
                     id="password"
                     name="password"
@@ -137,17 +128,16 @@ export default function Register() {
                     كلمة السر :
                   </label>
                 </div>
-              
+
                 <div
                   data-aos="fade-up"
                   data-aos-delay="500"
                   className="relative z-0 mb-5 group"
                 >
                   <input
-                                    value={formik.values.rePassword}
-                                      onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                    
+                    value={formik.values.rePassword}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                     type="password"
                     id="rePassword"
                     name="rePassword"
@@ -161,18 +151,16 @@ export default function Register() {
                     تأكيد كلمة المرور :
                   </label>
                 </div>
-              
+
                 <div
                   data-aos="fade-up"
                   data-aos-delay="500"
                   className="relative z-0 mb-5 group"
                 >
                   <input
-                                    value={formik.values.phone}
-                                    onChange={formik.handleChange}
-                                    onBlur={formik.handleBlur}
-                                    
-                    
+                    value={formik.values.phone}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
                     type="tel"
                     id="phone"
                     name="phone"
@@ -183,10 +171,10 @@ export default function Register() {
                     htmlFor="phone"
                     className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
-                     رقم الجوال :
+                    رقم الجوال :
                   </label>
                 </div>
-              
+
                 <h2 className="max-w-md mx-auto my-5 text-white">
                   لديك حساب ؟{" "}
                   <Link

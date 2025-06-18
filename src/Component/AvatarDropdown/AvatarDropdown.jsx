@@ -22,7 +22,7 @@ export default function AvatarDropdown() {
         className="flex items-center space-x-2 focus:outline-none"
       >
         <img
-          src={avatar} // replace with your avatar image path
+          src={avatar}
           alt="avatar"
           className="w-10 h-10 rounded-full border border-gray-300"
         />

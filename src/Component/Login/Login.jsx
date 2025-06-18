@@ -10,7 +10,7 @@ export default function Login() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: true,
+      once: false,
     });
     AOS.refresh();
   }, []);
