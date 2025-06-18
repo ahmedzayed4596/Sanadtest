@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-
+import avatar from "../../assets/avatar.png";
 export default function AvatarDropdown() {
   const [open, setOpen] = useState(false);
   const menuRef = useRef();
@@ -22,14 +22,14 @@ export default function AvatarDropdown() {
         className="flex items-center space-x-2 focus:outline-none"
       >
         <img
-          src="/avatar.png" // replace with your avatar image path
+          src={avatar} // replace with your avatar image path
           alt="avatar"
           className="w-10 h-10 rounded-full border border-gray-300"
         />
       </button>
 
       {open && (
-        <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
+        <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
           <ul className="py-2 text-sm text-gray-700">
             <li>
               <a href="/profile" className="block px-4 py-2 hover:bg-gray-100">
