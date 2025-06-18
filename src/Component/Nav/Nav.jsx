@@ -28,7 +28,7 @@ export default function Nav() {
           <Link
             to={"/"}
             onClick={handleLinkClick}
-            className="flex items-center space-x-3 rtl:space-x-reverse"
+            className="flex items-center space-x-3 "
           >
             <img
               src={logo}
@@ -39,9 +39,12 @@ export default function Nav() {
 
           {/* Links */}
           <div
-            className={`${
-              isOpen ? "block" : "hidden"
-            } w-full order-2 lg:flex lg:w-auto`}
+            className={`
+    ${isOpen ? "flex" : "hidden"}
+    absolute top-full left-0 w-full bg-white z-40
+    flex-col items-start p-4
+    lg:static lg:flex lg:flex-row lg:items-center lg:w-auto lg:p-0
+  `}
           >
             <ul className="flex font-bold flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
               <li>
@@ -93,7 +96,7 @@ export default function Nav() {
           </div>
 
           {/* Right buttons */}
-          <div className="flex md:order-2 gap-2 space-x-3 lg:space-x-0">
+          <div className="flex gap-2 space-x-3 lg:space-x-0">
             {userToken == null ? (
               <>
                 <Link
