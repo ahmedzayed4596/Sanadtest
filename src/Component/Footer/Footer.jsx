@@ -75,7 +75,7 @@ export default function Footer() {
             <div>
               <span className="flex gap-3 text-sm text-black sm:text-center">
                 © 2025
-                <p class="text-gray-500">
+                <p className="text-gray-500">
                   Designed & Development by
                   <a
                     className="me-1 watermark font-bold text-black hover:text-[#fcc24c]"

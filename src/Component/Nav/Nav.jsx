@@ -1,15 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import style from "./Nav.module.css";
 import logo from "../../assets/logo.png";
 import logo2 from "../../assets/sanad logo.png";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { userContext } from "../../../Context/UserContext";
+import AvatarDropdown from "../AvatarDropdown/AvatarDropdown";
 export default function Nav() {
+   const {userToken , setUserToken} = useContext(userContext)
+  const navigate = useNavigate()
+  function logoutbtn() {
+    localStorage.removeItem("userToken");
+    navigate("/login");
+    setUserToken(null);
+  }
   const [isOpen, setIsOpen] = useState(false);
   const handleLinkClick = () => {
     setIsOpen(false);
   };
   return (
     <>
+  
       <nav className="bg-white shadow-2xl fixed w-full z-50 top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link
@@ -78,18 +88,32 @@ export default function Nav() {
           </div>
 
           <div className="flex md:order-2 gap-2 space-x-3 lg:space-x-0">
-            <Link
+
+            {userToken == null ? <>
+              <Link
               to={"/Register"}
               className="text-white active:opacity-75 bg-[#07543a] hover:bg-[#fac337] hover:text-black  hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
             >
               إنشاء حساب
             </Link>
+           
             <Link
               to={"/Login"}
               className="text-white active:opacity-75 bg-[#07543a] hover:bg-[#fac337] hover:text-black  hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
             >
               تسجيل دخول
             </Link>
+            </> :   
+           
+<AvatarDropdown />
+
+
+
+
+ }
+          
+
+          
           </div>
 
           <button

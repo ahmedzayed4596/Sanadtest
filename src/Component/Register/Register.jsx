@@ -1,10 +1,55 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import style from "./Register.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import signupImg from "../../assets/singup.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useFormik } from "formik";
+import axios from "axios";
+import { userContext } from "../../../Context/UserContext";
 export default function Register() {
+  const navigate = useNavigate()
+  const {userToken , setUserToken} = useContext(userContext)
+
+
+
+ async function handleSubmit(values) {
+  console.log(values);
+  
+    try {
+      const src = await axios.post(
+        "https://ecommerce.routemisr.com/api/v1/auth/signup",
+        values
+      );
+      console.log(src.data);
+       localStorage.setItem('userToken' ,src.data.token ) 
+      navigate('/')
+      setUserToken(src.data.token)
+
+      
+     
+     
+    } catch (error) {
+      console.log(error);
+     
+    }finally {
+     
+    }
+  }
+
+   const formik = useFormik({
+
+    initialValues: {
+      name: "",
+      email: "",
+      password: "",
+      rePassword: "",
+      phone: "",
+    },
+    onSubmit: handleSubmit,
+  });
+
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -23,22 +68,26 @@ export default function Register() {
               >
                 تسجيل جديد
               </h2>
-              <form className="max-w-md mx-auto mt-5 px-3">
+              <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto mt-5 px-3">
                 <div
                   data-aos="fade-up"
                   data-aos-delay="100"
-                  class="relative z-0 mb-5 group"
+                  className="relative z-0 mb-5 group"
                 >
                   <input
-                    required
+                  value={formik.values.name}
+                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                    
                     type="text"
-                    id="floating_standard"
-                    class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
+                    id="name"
+                    name="name"
+                    className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
                     placeholder=" "
                   />
                   <label
-                    for="floating_standard"
-                    class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                    htmlFor="name"
+                    className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
                     إسم المستخدم :
                   </label>
@@ -46,18 +95,22 @@ export default function Register() {
                 <div
                   data-aos="fade-up"
                   data-aos-delay="300"
-                  class="relative z-0 mb-5 group"
+                  className="relative z-0 mb-5 group"
                 >
                   <input
-                    required
+                                    value={formik.values.email}
+                                      onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                    
                     type="email"
-                    id="floating_standard"
-                    class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
+                    id="email"
+                    name="email"
+                    className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
                     placeholder=" "
                   />
                   <label
-                    for="floating_standard"
-                    class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                    htmlFor="email"
+                    className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
                     البريد الإلكتروني :
                   </label>
@@ -65,48 +118,75 @@ export default function Register() {
                 <div
                   data-aos="fade-up"
                   data-aos-delay="500"
-                  class="relative z-0 mb-5 group"
+                  className="relative z-0 mb-5 group"
                 >
                   <input
-                    required
+                                      value={formik.values.password}
+                                        onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
                     type="password"
-                    id="floating_standard"
-                    class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
+                    id="password"
+                    name="password"
+                    className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
                     placeholder=" "
                   />
                   <label
-                    for="floating_standard"
-                    class="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                    htmlFor="password"
+                    className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
                     كلمة السر :
                   </label>
                 </div>
+              
                 <div
                   data-aos="fade-up"
-                  data-aos-delay="600"
+                  data-aos-delay="500"
                   className="relative z-0 mb-5 group"
                 >
-                  <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-sm text-white">
-                    +966
-                  </span>
-
                   <input
-                    required
-                    type="tel"
-                    id="floating_standard"
-                    className="block py-2.5 pl-16 pr-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
+                                    value={formik.values.rePassword}
+                                      onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                    
+                    type="password"
+                    id="rePassword"
+                    name="rePassword"
+                    className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
                     placeholder=" "
-                    pattern="[0-9]{9}"
-                    maxLength={9}
                   />
-
                   <label
-                    htmlFor="floating_standard"
-                    className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:origin-[0] peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                    htmlFor="rePassword"
+                    className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
                   >
-                    رقم الجوال :
+                    تأكيد كلمة المرور :
                   </label>
                 </div>
+              
+                <div
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                  className="relative z-0 mb-5 group"
+                >
+                  <input
+                                    value={formik.values.phone}
+                                    onChange={formik.handleChange}
+                                    onBlur={formik.handleBlur}
+                                    
+                    
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
+                    placeholder=" "
+                  />
+                  <label
+                    htmlFor="phone"
+                    className="absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-[#fac337] peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"
+                  >
+                     رقم الجوال :
+                  </label>
+                </div>
+              
                 <h2 className="max-w-md mx-auto my-5 text-white">
                   لديك حساب ؟{" "}
                   <Link
