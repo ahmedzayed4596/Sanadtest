@@ -11,6 +11,7 @@ import Login from "./Component/Login/Login";
 import Register from "./Component/Register/Register";
 import Partner from "./Component/Partner/Partner";
 import AllServices from "./Component/AllServices/AllServices";
+import UserContextProvider from "../Context/UserContext";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,11 +31,13 @@ function App() {
     },
   ]);
 
-  createBrowserRouter;
+ 
   return (
     <>
-      {" "}
-      <RouterProvider router={router}></RouterProvider>{" "}
+     
+     <UserContextProvider >
+   <RouterProvider router={router} ></RouterProvider>
+   </UserContextProvider>
     </>
   );
 }
