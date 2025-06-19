@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import avatar from "../../assets/avatar.png";
 import { Link } from "react-router-dom";
-export default function AvatarDropdown() {
+export default function AvatarDropdown({logoutbtn}) {
+
   const [open, setOpen] = useState(false);
   const menuRef = useRef();
 
@@ -49,7 +50,7 @@ export default function AvatarDropdown() {
             </li>
             <li>
               <button
-                onClick={() => alert("تم تسجيل الخروج")}
+                onClick={logoutbtn}
                 className="w-full text-left px-4 py-2 hover:bg-gray-100"
               >
                 تسجيل الخروج

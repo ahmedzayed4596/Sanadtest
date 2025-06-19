@@ -16,7 +16,7 @@ export default function Orders() {
       id: "5678",
       service: "فتح سجل",
       date: "2025-06-14",
-      status: "تم التنفيذ",
+      status: "ملغي",
     },
     {
       id: "9012",
@@ -46,7 +46,7 @@ export default function Orders() {
       id: "2222",
       service: "استعلام",
       date: "2025-06-09",
-      status: "قيد المعالجة",
+      status: "ملغي",
     },
   ];
 
@@ -68,6 +68,8 @@ export default function Orders() {
         return "text-green-600 bg-green-100 rounded-lg";
       case "قيد المعالجة":
         return "text-orange-600 bg-orange-100 rounded-lg";
+        case "ملغي":
+        return "text-red-600 bg-red-100 rounded-lg";
       default:
         return "text-gray-600 bg-gray-100 rounded-lg";
     }
@@ -92,7 +94,7 @@ export default function Orders() {
       </div>
 
       {/* البحث */}
-      <div className="mb-6 w-[25%]">
+      <div className="mb-6 sm:w-[25%] w-full">
         <input
           type="text"
           placeholder="ابحث برقم الطلب"

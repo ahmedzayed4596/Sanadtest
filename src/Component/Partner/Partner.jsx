@@ -104,7 +104,7 @@ export default function Partner() {
                 <h2 className="text-lg text-[#fac337] underline-offset-2 underline font-bold">
                   بامكانك الانضمام الينا الان :
                 </h2>
-                <Link className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+                <Link to={'/Register'} className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
                   سجل الان
                   <svg
                     width="20px"
@@ -166,7 +166,7 @@ export default function Partner() {
                 <h2 className="text-lg text-[#fac337] underline-offset-2 underline font-bold">
                   بامكانك الانضمام الينا الان :
                 </h2>
-                <Link className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+                <Link to={'/Register'} className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
                   سجل الان
                   <svg
                     width="20px"
@@ -228,7 +228,7 @@ export default function Partner() {
                 <h2 className="text-lg text-[#fac337] underline-offset-2 underline font-bold">
                   بامكانك الانضمام الينا الان :
                 </h2>
-                <Link className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+                <Link to={'/Register'} className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
                   سجل الان
                   <svg
                     width="20px"
@@ -290,7 +290,7 @@ export default function Partner() {
                 <h2 className="text-lg text-[#fac337] underline-offset-2 underline font-bold">
                   بامكانك الانضمام الينا الان :
                 </h2>
-                <Link className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+                <Link to={'/Register'} className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
                   سجل الان
                   <svg
                     width="20px"
@@ -352,7 +352,7 @@ export default function Partner() {
                 <h2 className="text-lg text-[#fac337] underline-offset-2 underline font-bold">
                   بامكانك الانضمام الينا الان :
                 </h2>
-                <Link className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
+                <Link to={'/Register'} className="flex items-center mx-auto mt-10 bg-[#fac337] hover:bg-white text-white font-bold hover:text-black active:opacity-75 px-5 py-3 gap-2 text-sm text-center rounded-lg w-fit hover:cursor-pointer transition-colors duration-200 ease-in-out">
                   سجل الان
                   <svg
                     width="20px"

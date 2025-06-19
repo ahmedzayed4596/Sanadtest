@@ -5,6 +5,7 @@ import about1 from "../../assets/about1.jpeg";
 import about2 from "../../assets/about2.jpeg";
 import { FaBriefcase, FaHandshake, FaSmile } from "react-icons/fa";
 import CountUp from "react-countup";
+import { Link } from "react-router-dom";
 
 export default function About() {
   useEffect(() => {
@@ -108,14 +109,15 @@ export default function About() {
                     <FaSmile className="text-[#f0bb35] text-4xl mt-2" />
                   </div>
                 </div>
-                <button
+                <Link
+                to={'/Contact'}
                   data-aos="fade-up"
                   data-aos-delay="400"
                   data-aos-duration="1100"
                   className="w-fit sm:w-fit px-5 py-2 bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer active:opacity-75 transition-colors duration-200 ease-in-out rounded-lg shadow justify-center items-center flex"
                 >
                   تواصل معنا
-                </button>
+                </Link>
               </div>
             </div>
           </div>

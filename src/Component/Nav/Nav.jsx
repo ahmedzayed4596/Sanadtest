@@ -108,7 +108,7 @@ export default function Nav() {
                 </Link>
               </>
             ) : (
-              <AvatarDropdown />
+            <AvatarDropdown logoutbtn={logoutbtn} />
             )}
           </div>
 
