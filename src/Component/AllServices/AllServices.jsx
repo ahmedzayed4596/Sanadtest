@@ -164,6 +164,10 @@ export default function Partner() {
     AOS.init({ duration: 1000, once: false });
     AOS.refresh();
   }, []);
+
+  const [isTouched, setIsTouched] = useState(false);
+
+  const toggleTouch = () => setIsTouched(!isTouched);
   return (
     <>
       <section className="bg-gray-50 py-40 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-fixed sm:bg-cover bg-center">
@@ -239,6 +243,7 @@ export default function Partner() {
                   data-aos-delay="200"
                   data-aos-duration="500"
                   className={`relative rounded-xl overflow-hidden shadow-md p-4 flex flex-col justify-between items-center text-center border border-[#fac337] group bg-white ${style.main}`}
+                  onClick={toggleTouch}
                 >
                   <svg
                     version="1.1"
@@ -247,8 +252,7 @@ export default function Partner() {
                     xmlnsXlink="http://www.w3.org/1999/xlink"
                     viewBox="0 0 508 508"
                     xmlSpace="preserve"
-                    width="80px"
-                    height="80px"
+                    className="w-[50px] h-[50px] md:w-[80px] md:h-[80px]"
                     fill="#000000"
                   >
                     <g id="SVGRepo_bgCarrier" strokeWidth={0} />
@@ -466,11 +470,17 @@ export default function Partner() {
                       </g>{" "}
                     </g>
                   </svg>
-                  <h3 className="text-2xl font-bold text-black my-5">
+                  <h3 className="text-sm sm:text-2xl font-bold text-black my-5">
                     {service.name}
                   </h3>
                   <div
-                    className={`bg-green-900/80 ${style.child} rounded-lg m-4 absolute inset-0 flex flex-col justify-center items-center z-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                    className={`
+          bg-green-900/80 ${style.child} rounded-lg m-4 absolute inset-0
+          flex flex-col justify-center items-center z-20
+          transition-opacity duration-300
+          ${isTouched ? "opacity-100" : "opacity-0"}
+          group-hover:opacity-100
+        `}
                   >
                     <Link className="mt-6 bg-[#fac337] hover:bg-white text-black hover:text-black px-5 py-2 text-sm rounded-lg transition-colors duration-200 ease-in-out">
                       طلب الخدمة

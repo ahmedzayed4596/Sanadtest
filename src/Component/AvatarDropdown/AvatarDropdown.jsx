@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import avatar from "../../assets/avatar.png";
+import { Link } from "react-router-dom";
 export default function AvatarDropdown() {
   const [open, setOpen] = useState(false);
   const menuRef = useRef();
@@ -35,6 +36,11 @@ export default function AvatarDropdown() {
               <a href="/profile" className="block px-4 py-2 hover:bg-gray-100">
                 الملف الشخصي
               </a>
+            </li>
+            <li>
+              <Link to={"/Orders"} className="block px-4 py-2 hover:bg-gray-100">
+                طلباتي
+              </Link>
             </li>
             <li>
               <a href="/settings" className="block px-4 py-2 hover:bg-gray-100">

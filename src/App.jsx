@@ -12,6 +12,7 @@ import Register from "./Component/Register/Register";
 import Partner from "./Component/Partner/Partner";
 import AllServices from "./Component/AllServices/AllServices";
 import UserContextProvider from "../Context/UserContext";
+import Orders from "./Component/Orders/Orders";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
         { path: "/Login", element: <Login></Login> },
         { path: "/Partner", element: <Partner></Partner> },
         { path: "/allservcies", element: <AllServices></AllServices> },
+        { path: "/Orders", element: <Orders></Orders> },
       ],
     },
   ]);
