@@ -6,13 +6,33 @@ import signupImg from "../../assets/singup.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import axios from "axios";
+import * as Yup from "yup";
 import { userContext } from "../../../Context/UserContext";
+import { spinner } from "@material-tailwind/react";
 export default function Register() {
+  const Schema = Yup.object().shape({
+    name: Yup.string().required("حقل مطلوب").min(3 , 'الاسم يجب ان يكون اكثر من حرفين').max(15 , 'الاسم يجب ان يكون اقل من 15 حرف'),
+    email: Yup.string()
+      .required("حقل مطلوب")
+      .matches(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/, "Enter a valid email")
+      .email(),
+    password: Yup.string().required("حقل مطلوب").min(6).max(15),
+    rePassword: Yup.string()
+      .required("حقل مطلوب")
+      .oneOf([Yup.ref("password")], "PASSWORD DOSENT SAME"),
+    phone: Yup.string()
+      .required("حقل مطلوب")
+      .matches(/^01[0125][0-9]{8}$/, "enter a Eg number"),
+  });
+
   const navigate = useNavigate();
   const { userToken, setUserToken } = useContext(userContext);
+  const [isLouding, setIsLouding] = useState(false);
+  const [errMsg, setErrMsg] = useState(null);
 
   async function handleSubmit(values) {
     console.log(values);
+    setIsLouding(true);
 
     try {
       const src = await axios.post(
@@ -25,7 +45,9 @@ export default function Register() {
       setUserToken(src.data.token);
     } catch (error) {
       console.log(error);
+      setErrMsg(error.response.data.message);
     } finally {
+      setIsLouding(false);
     }
   }
 
@@ -38,6 +60,7 @@ export default function Register() {
       phone: "",
     },
     onSubmit: handleSubmit,
+    validationSchema: Schema,
   });
 
   useEffect(() => {
@@ -84,6 +107,15 @@ export default function Register() {
                     إسم المستخدم :
                   </label>
                 </div>
+                {formik.errors.name && formik.touched.name && (
+                  <div
+                    className="py-2.5 px-3.5 font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                    role="alert"
+                  >
+                    {formik.errors.name}
+                  </div>
+                )}
+
                 <div
                   data-aos="fade-up"
                   data-aos-delay="300"
@@ -106,6 +138,19 @@ export default function Register() {
                     البريد الإلكتروني :
                   </label>
                 </div>
+
+                 {formik.errors.email && formik.touched.email &&  <div
+          className="py-2.5 px-3.5 font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+          role="alert"
+        >
+          {formik.errors.email}
+        </div>
+        }
+
+
+
+
+
                 <div
                   data-aos="fade-up"
                   data-aos-delay="500"
@@ -128,6 +173,21 @@ export default function Register() {
                     كلمة السر :
                   </label>
                 </div>
+
+                 {
+          formik.errors.password && formik.touched.password &&  <div
+          className="py-2.5 px-3.5  font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+          role="alert"
+        >
+          {formik.errors.password}
+        </div>
+        }
+
+
+
+
+
+
 
                 <div
                   data-aos="fade-up"
@@ -152,6 +212,15 @@ export default function Register() {
                   </label>
                 </div>
 
+                 {
+          formik.errors.rePassword && formik.touched.rePassword &&  <div
+          className="py-2.5 px-3.5 font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+          role="alert"
+        >
+          {formik.errors.rePassword}
+        </div>
+        }
+
                 <div
                   data-aos="fade-up"
                   data-aos-delay="500"
@@ -175,6 +244,15 @@ export default function Register() {
                   </label>
                 </div>
 
+                 {
+          formik.errors.phone && formik.touched.phone &&  <div
+          className="py-2.5 px-3.5  font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+          role="alert"
+        >
+          {formik.errors.phone}
+        </div>
+        }
+
                 <h2 className="max-w-md mx-auto my-5 text-white">
                   لديك حساب ؟{" "}
                   <Link
@@ -185,11 +263,22 @@ export default function Register() {
                   </Link>
                 </h2>
                 <button
+                  disabled={isLouding}
                   type="submit"
-                  className="text-white bg-green-500 active:opacity-75 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
+                  className="disabled:opacity-35 text-white bg-green-500 active:opacity-75 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
                 >
-                  تسجيل
+                  {!isLouding ? <>تسجيل</> : <> جاري التحميل ... </>}
                 </button>
+
+
+                 {
+          errMsg &&  <div
+          className="py-2.5 px-3.5 font-medium mb-4 text-sm text-red-800 rounded-lg my-6 bg-red-50 dark:bg-gray-800 dark:text-red-400"
+          role="alert"
+        >
+          {errMsg}
+        </div>
+        }
               </form>
             </div>
             <div className="md:col-span-1 lg:block hidden">

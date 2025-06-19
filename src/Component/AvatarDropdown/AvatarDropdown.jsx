@@ -43,11 +43,7 @@ export default function AvatarDropdown({logoutbtn}) {
                 طلباتي
               </Link>
             </li>
-            <li>
-              <a href="/settings" className="block px-4 py-2 hover:bg-gray-100">
-                الإعدادات
-              </a>
-            </li>
+           
             <li>
               <button
                 onClick={logoutbtn}

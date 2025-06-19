@@ -94,7 +94,7 @@ export default function Orders() {
       </div>
 
       {/* البحث */}
-      <div className="mb-6 sm:w-[25%] w-full">
+      <div className="mb-6 sm:w-[25%] ">
         <input
           type="text"
           placeholder="ابحث برقم الطلب"
@@ -103,7 +103,7 @@ export default function Orders() {
             setSearch(e.target.value);
             setCurrentPage(1); // إعادة تعيين الصفحة عند البحث
           }}
-          className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+          className="w-full sm:w-[25%] p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
         />
       </div>
 
