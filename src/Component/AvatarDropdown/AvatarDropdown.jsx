@@ -34,16 +34,19 @@ export default function AvatarDropdown({logoutbtn}) {
         <div className="absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg z-50">
           <ul className="py-2 text-sm text-gray-700">
             <li>
-              <a href="/profile" className="block px-4 py-2 hover:bg-gray-100">
+              <Link to={"/Profile"} className="block px-4 py-2 hover:bg-gray-100">
                 الملف الشخصي
-              </a>
+              </Link>
             </li>
             <li>
-              <Link to={"/Orders"} className="block px-4 py-2 hover:bg-gray-100">
+              <Link
+                to={"/Orders"}
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
                 طلباتي
               </Link>
             </li>
-           
+
             <li>
               <button
                 onClick={logoutbtn}

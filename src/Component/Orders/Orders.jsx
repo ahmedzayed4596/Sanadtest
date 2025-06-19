@@ -132,10 +132,10 @@ export default function Orders() {
               </span>
             </div>
             <div className="flex gap-2">
-              <button className="px-4 py-1 bg-green-500 text-white rounded hover:bg-green-600">
+              <button className="px-4 py-1 hover:cursor-pointer transition-colors duration-200 ease-in-out bg-green-500 text-white rounded hover:bg-green-600">
                 تعديل
               </button>
-              <button className="px-4 py-1 bg-gray-500 text-white rounded hover:bg-gray-600">
+              <button className="px-4 py-1 hover:cursor-pointer transition-colors duration-200 ease-in-out bg-gray-500 text-white rounded hover:bg-gray-600">
                 إدارة
               </button>
             </div>
