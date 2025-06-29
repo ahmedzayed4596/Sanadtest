@@ -18,6 +18,7 @@ export default function About() {
 
   return (
     <>
+      
       <div className="pt-20 px-4 bg-[url('../../../public/bg2.png')] sm:bg-[url('../../../public/bg1.png')] bg-fixed sm:bg-cover bg-center">
         <section className="py-16 sm:py-24 relative overflow-hidden">
           <div className="w-full max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto">

@@ -35,13 +35,11 @@ function App() {
     },
   ]);
 
- 
   return (
     <>
-     
-     <UserContextProvider >
-   <RouterProvider router={router} ></RouterProvider>
-   </UserContextProvider>
+    <UserContextProvider >
+  <RouterProvider router={router} ></RouterProvider>
+  </UserContextProvider>
     </>
   );
 }

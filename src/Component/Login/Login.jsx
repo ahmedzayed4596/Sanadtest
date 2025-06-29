@@ -4,7 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import signupImg from "../../assets/singup.png";
 import { Link, useNavigate } from "react-router-dom";
-import back from "../../assets/back.jpeg";
 import * as Yup from 'yup'
 import { userContext } from "../../../Context/UserContext";
 import axios from "axios";
@@ -72,7 +71,7 @@ export default function Login() {
           <div className="grid lg:grid-cols-2">
             <div className="md:col-span-1 lg:block hidden">
               <img
-                src={back}
+                src={signupImg}
                 height="500px"
                 className="w-full  object-cover rounded-lg shadow-2xl"
                 alt=""
@@ -85,20 +84,22 @@ export default function Login() {
               >
                 <span className="text-white">تسجيل</span> الدخول
               </h2>
-              <form onSubmit={formik.handleSubmit} className="max-w-md px-3 mx-auto mt-5">
+              <form
+                onSubmit={formik.handleSubmit}
+                className="max-w-md px-3 mx-auto mt-5"
+              >
                 <div
                   data-aos="fade-up"
                   data-aos-delay="200"
                   class="relative z-0 mb-5 group"
                 >
                   <input
-                    
-                   type="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            name="email"
-            id="email"
+                    type="email"
+                    value={formik.values.email}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    name="email"
+                    id="email"
                     class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
                     placeholder=" "
                   />
@@ -110,15 +111,14 @@ export default function Login() {
                   </label>
                 </div>
 
-
-                 {
-          formik.errors.email && formik.touched.email &&  <div
-          className="p-4 font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
-          role="alert"
-        >
-          {formik.errors.email}
-        </div>
-        }
+                {formik.errors.email && formik.touched.email && (
+                  <div
+                    className="p-4 font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                    role="alert"
+                  >
+                    {formik.errors.email}
+                  </div>
+                )}
 
                 <div
                   data-aos="fade-up"
@@ -126,13 +126,12 @@ export default function Login() {
                   class="relative z-0 mb-5 group"
                 >
                   <input
-                    
-                   type="password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            name="password"
-            id="password"
+                    type="password"
+                    value={formik.values.password}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    name="password"
+                    id="password"
                     class="block py-2.5 px-0 w-full text-sm text-white bg-transparent border-0 border-b-2 border-gray-300 appearance-none  focus:outline-none focus:ring-0 focus:border-[#fac337] peer"
                     placeholder=" "
                   />
@@ -144,14 +143,14 @@ export default function Login() {
                   </label>
                 </div>
 
-                 {
-          formik.errors.password && formik.touched.password &&  <div
-          className="p-4 font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
-          role="alert"
-        >
-          {formik.errors.password}
-        </div>
-        }
+                {formik.errors.password && formik.touched.password && (
+                  <div
+                    className="p-4 font-medium mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                    role="alert"
+                  >
+                    {formik.errors.password}
+                  </div>
+                )}
 
                 <div>
                   <p className="text-white my-4">
@@ -184,23 +183,21 @@ export default function Login() {
                 </div>
 
                 <button
-                 disabled ={isLouding}
+                  disabled={isLouding}
                   type="submit"
                   className="text-white disabled:opacity-25 w-full active:opacity-75 bg-green-500 hover:bg-[#fac337] font-bold hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-lg rounded-lg text-sm px-4 py-2"
                 >
-                 {isLouding ? 'جاري التحميل ...' : 'تسجيل الدخول'}
+                  {isLouding ? "جاري التحميل ..." : "تسجيل الدخول"}
                 </button>
 
-
-
-                 {
-          errMsg &&  <div
-          className="p-4 font-medium mb-4 text-sm text-red-800 rounded-lg my-6 bg-red-50 dark:bg-gray-800 dark:text-red-400"
-          role="alert"
-        >
-          {errMsg}
-        </div>
-        }
+                {errMsg && (
+                  <div
+                    className="p-4 font-medium mb-4 text-sm text-red-800 rounded-lg my-6 bg-red-50 dark:bg-gray-800 dark:text-red-400"
+                    role="alert"
+                  >
+                    {errMsg}
+                  </div>
+                )}
               </form>
             </div>
           </div>

@@ -51,14 +51,16 @@ export default function Profile() {
 
   return (
     <div className="min-h-screen bg-gray-100 py-40 px-4 md:px-20" dir="rtl">
-      <h1 className="text-3xl font-bold mb-6 text-right">الملف الشخصي</h1>
+      <h1 className="text-3xl font-bold mb-6 text-[#fac337] text-right">
+        الملف الشخصي
+      </h1>
 
       {/* التبويبات */}
       <div className="flex gap-4 mb-6">
         <button
           className={`px-4 py-2 rounded ${
             tab === "profile"
-              ? "bg-blue-600 text-white"
+              ? "bg-green-600 hover:bg-green-500 hover:cursor-pointer text-white"
               : "bg-white text-gray-800"
           }`}
           onClick={() => setTab("profile")}
@@ -68,7 +70,7 @@ export default function Profile() {
         <button
           className={`px-4 py-2 rounded ${
             tab === "password"
-              ? "bg-blue-600 text-white"
+              ? "bg-green-600 hover:bg-green-500 hover:cursor-pointer text-white"
               : "bg-white text-gray-800"
           }`}
           onClick={() => setTab("password")}
@@ -78,7 +80,7 @@ export default function Profile() {
         <button
           className={`px-4 py-2 rounded ${
             tab === "orders"
-              ? "bg-blue-600 text-white"
+              ? "bg-green-600 hover:bg-green-500 hover:cursor-pointer text-white"
               : "bg-white text-gray-800"
           }`}
           onClick={() => setTab("orders")}
@@ -179,7 +181,7 @@ export default function Profile() {
             </div>
             <button
               type="submit"
-              className="w-full mt-4 bg-yellow-500 text-white py-2 rounded hover:bg-yellow-600"
+              className="w-fit p-5 mt-4 bg-green-600 hover:bg-green-500 hover:cursor-pointer text-white py-2 rounded-lg "
             >
               تغيير كلمة المرور
             </button>
