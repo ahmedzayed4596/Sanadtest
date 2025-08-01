@@ -4,9 +4,8 @@ import logo from "../../assets/logo.png";
 import logo2 from "../../assets/sanad logo.png";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { userContext } from "../../../Context/UserContext";
-import AvatarDropdown from "../AvatarDropdown/AvatarDropdown";
 export default function Nav() {
-   const {userToken , setUserToken} = useContext(userContext)
+  const {userToken , setUserToken} = useContext(userContext)
   const navigate = useNavigate()
   function logoutbtn() {
     localStorage.removeItem("userToken");
@@ -19,13 +18,13 @@ export default function Nav() {
   };
   return (
     <>
-  
       <nav className="bg-white shadow-2xl fixed w-full z-50 top-0 start-0">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          {/* ✅ اللوجو على اليمين في الشاشات الكبيرة */}
           <Link
             to={"/"}
             onClick={handleLinkClick}
-            className="flex items-center space-x-3 "
+            className="flex items-center space-x-3 lg:order-1"
           >
             <img
               src={logo}
@@ -33,20 +32,22 @@ export default function Nav() {
               alt="Sanad Logo"
             />
           </Link>
+
+          {/* ✅ قائمة التنقل في المنتصف على الشاشات الكبيرة فقط */}
           <div
             className={`
-    ${isOpen ? "block" : "hidden"}
-    absolute top-full left-0 w-full bg-white z-40
-    flex-col items-start p-4
-    lg:static lg:flex lg:flex-row lg:items-center lg:w-auto lg:p-0
-  `}
+      ${isOpen ? "block" : "hidden"}
+      absolute top-full left-0 w-full bg-white z-40
+      flex-col items-start p-4
+      lg:static lg:flex lg:flex-row lg:items-center lg:w-auto lg:p-0 lg:order-2 lg:mx-auto
+    `}
           >
             <ul className="flex font-bold flex-col p-4 lg:p-0 mt-4 border border-gray-100 rounded-lg lg:flex-row lg:space-x-8 lg:mt-0 lg:border-0 lg:bg-white">
               <li>
                 <NavLink
                   to={"/"}
                   onClick={handleLinkClick}
-                  className="block  py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
+                  className="block py-2 px-3 transition-colors duration-200 ease-in-out text-black hover:text-[#fac337]"
                 >
                   الرئيسية
                 </NavLink>
@@ -90,28 +91,7 @@ export default function Nav() {
             </ul>
           </div>
 
-          {/* Right buttons */}
-          <div className="flex md:order-2 gap-2 space-x-3 lg:space-x-0">
-            {userToken == null ? (
-              <>
-                <Link
-                  to={"/Register"}
-                  className="text-white active:opacity-75 bg-[#07543a] hover:bg-[#fac337] hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
-                >
-                  إنشاء حساب
-                </Link>
-                <Link
-                  to={"/Login"}
-                  className="text-white active:opacity-75 bg-[#07543a] hover:bg-[#fac337] hover:text-black hover:cursor-pointer transition-colors duration-200 ease-in-out font-medium rounded-lg text-sm px-4 py-2"
-                >
-                  تسجيل دخول
-                </Link>
-              </>
-            ) : (
-            <AvatarDropdown logoutbtn={logoutbtn} />
-            )}
-          </div>
-
+          {/* زر الهامبورجر */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
@@ -128,6 +108,7 @@ export default function Nav() {
             </svg>
           </button>
         </div>
+
         <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-l from-yellow-300 via-yellow-400 to-yellow-600"></div>
       </nav>
     </>

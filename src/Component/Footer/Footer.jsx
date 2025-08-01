@@ -192,7 +192,7 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.tiktok.com/@sanadofficial115"
                 target="_blank"
                 className="text-black hover:text-[#fac337] ms-5"
               >
