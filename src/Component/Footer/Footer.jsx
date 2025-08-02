@@ -20,20 +20,20 @@ export default function Footer() {
                 </h2>
                 <ul className="text-black  font-medium">
                   <li className="mb-4">
-                    <a
-                      href="https://flowbite.com/"
+                    <Link
+                      to={'/Servcies'}
                       className="hover:underline hover:text-[#fac337]"
                     >
                       خدماتنا
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="https://tailwindcss.com/"
+                    <Link
+                     to={'/'}
                       className="hover:underline hover:text-[#fac337]"
                     >
                       العروض
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -44,20 +44,20 @@ export default function Footer() {
                 </h2>
                 <ul className="text-black  font-medium">
                   <li className="mb-4">
-                    <a
-                      href="#"
+                    <Link
+                      to={'/About'}
                       className="hover:underline hover:text-[#fac337]"
                     >
                       معلومات عنا
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="#"
+                    <Link
+                     to={'/Contact'}
                       className="hover:underline hover:text-[#fac337]"
                     >
                       تواصل معنا
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
