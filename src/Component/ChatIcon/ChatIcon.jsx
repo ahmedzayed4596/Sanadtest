@@ -5,7 +5,7 @@ const ChatIcon = () => {
   const [open, setOpen] = useState(false);
   const [message, setMessage] = useState("");
 
-  const yourNumber = "+201155843665"; // رقمك على واتساب
+  const yourNumber = "+966506794692"; // رقمك على واتساب
 
   const openWhatsApp = () => {
     const encodedMessage = encodeURIComponent(

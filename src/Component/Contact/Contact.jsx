@@ -237,8 +237,8 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="col-span-1 sm:col-span-12 md:col-span-7 mx-3">
-            <div className="p-5 bg-[#07543a] rounded-2xl">
+          <div className="col-span-1 sm:col-span-12 md:col-span-7 mx-3 ">
+            <div className="p-5 bg-[#07543a] rounded-2xl border-2 border-[#fac337]">
               <h2 className="text-center text-[#fac337] text-2xl font-extrabold">
                 ارسل طلبك الان :{" "}
               </h2>
