@@ -7,26 +7,24 @@ import "aos/dist/aos.css";
 export default function Partner() {
   const Services = [
     // 🏢 خدمات وزارة التجارة
-    { category: "وزارة التجارة", name: "تجديد سجل تجاري" },
-    { category: "وزارة التجارة", name: "فتح سجل تجاري" },
+    { category: "وزارة التجارة", name: "إصدار سجل تجاري" },
     { category: "وزارة التجارة", name: "شطب سجل تجاري" },
     { category: "وزارة التجارة", name: "تعديل بيانات السجل التجاري" },
-    { category: "وزارة التجارة", name: "إصدار سجل تجاري فرعي" },
     { category: "وزارة التجارة", name: "تحويل سجل فردي إلى شركة" },
-    { category: "وزارة التجارة", name: "تأكيد السنوي للسجل" },
+    { category: "وزارة التجارة", name: " تأكيد السنوي للسجل التجاري" },
     { category: "وزارة التجارة", name: "إصدار شهادة السجل التجاري" },
     { category: "وزارة التجارة", name: "حجز اسم تجاري" },
     { category: "وزارة التجارة", name: "تحويل ملكية السجل التجاري" },
     { category: "وزارة التجارة", name: "إصدار سجل تجاري مهني" },
     { category: "وزارة التجارة", name: "إصدار سجل تجاري للمستثمر الأجنبي" },
+    { category: "وزارة التجارة", name: "نقل اسم تجاري" },
     {
       category: "وزارة التجارة",
       name: "إصدار سجل تجاري إلكتروني (منصة معروف)",
     },
-    { category: "وزارة التجارة", name: "التحقق من السجل التجاري" },
-    { category: "وزارة التجارة", name: "الربط بين الفروع الرئيسية والفرعية" },
-    { category: "وزارة التجارة", name: "تصفية شركة" },
-
+    { category: "وزارة التجارة", name: "تصفية شركة عملت" },
+    { category: "وزارة التجارة", name: "موائمة عقد التأسيس" },
+    { category: "وزارة التجارة", name: "تصفية شركة لم تعمل" },
     // 🏛️ خدمات البلدية (بلدي)
     { category: "البلدية", name: "إصدار رخصة بلدية (رخصة محل)" },
     { category: "البلدية", name: "تجديد رخصة بلدية" },
@@ -473,19 +471,18 @@ export default function Partner() {
                   <h3 className="text-sm sm:text-2xl font-bold text-black my-5">
                     {service.name}
                   </h3>
-                  <div
-                    className={`
-          bg-green-900/80 ${style.child} rounded-lg m-4 absolute inset-0
-          flex flex-col justify-center items-center z-20
-          transition-opacity duration-300
-          ${isTouched ? "opacity-100" : "opacity-0"}
-          group-hover:opacity-100
-        `}
+
+                  <Link
+                    to={""}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 bg-[#fac337] hover:bg-[#07543a] text-black font-bold hover:text-white px-5 py-2 text-sm rounded-lg transition-colors duration-200 ease-in-out"
+                    onClick={() =>
+                      window.open("https://wa.me/966506794692", "_blank")
+                    }
                   >
-                    <Link className="mt-6 bg-[#fac337] hover:bg-white text-black hover:text-black px-5 py-2 text-sm rounded-lg transition-colors duration-200 ease-in-out">
-                      طلب الخدمة
-                    </Link>
-                  </div>
+                    طلب الخدمة
+                  </Link>
                 </div>
               ))
             ) : (

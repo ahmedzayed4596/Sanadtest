@@ -13,6 +13,7 @@ import bldy from "../../assets/bldy.png";
 import muqeem from "../../assets/muqeem.png";
 import nakl from "../../assets/nakl.png";
 import mawared from "../../assets/mawared.png";
+import nagez from "../../assets/nagez.png";
 
 export default function Servcies() {
   const services = [
@@ -59,6 +60,12 @@ export default function Servcies() {
         "إدارة علاقات العمل، العقود، والتأشيرات بشكل رقمي ومتوافق مع أنظمة وزارة الموارد البشرية.",
     },
     {
+      title: "ناجز",
+      icon: nagez,
+      description:
+        "خدمات إلكترونية تشمل الوكالات، العقارات، القضايا والتنفيذ، بالتكامل مع وزارة العدل.",
+    },
+    {
       title: "الهيئة العامة للنقل",
       icon: nakl,
       description:
@@ -74,14 +81,15 @@ export default function Servcies() {
 
 
   const settings = {
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    speed: 8000,
+    autoplay: false,
+    speed: 500,
     autoplaySpeed: 1,
+
     cssEase: "linear",
     responsive: [
       {
@@ -126,7 +134,7 @@ export default function Servcies() {
                       <img
                         src={service.icon}
                         alt={service.title}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-fit"
                       />
                     </div>
                     <h3 className="text-xl text-green-800 font-bold text-center mb-2">

@@ -24,7 +24,7 @@ const Contact = () => {
           <div className="col-span-1 sm:col-span-12 md:col-span-5  ">
             <div className="p-5 space-y-3 ">
               <h3 className="text-[#07543a] text-center text-2xl font-extrabold mb-5">
-                فريقنا موجود دائما من اجل اعمالك
+                فريقنا موجود دائما من اجلكم
               </h3>
               <div className="grid gap-3 grid-cols-1 text-center sm:grid-cols-2">
                 <div className="col-span-2 sm:col-span-1 cart border-2 border-[#fac337] rounded-lg hover:bg-gray-400 duration-300 transition shadow-xl p-4">
@@ -81,7 +81,9 @@ const Contact = () => {
                   </h3>
                   <h5 className="text-2xl text-[#07543a] font-extrabold ">
                     {" "}
-                    96655555555
+                    <a href="" target="_blank">
+                      966506794692
+                    </a>
                   </h5>
                 </div>
                 <div className="col-span-2 sm: cart rounded-lg border-2 shadow-2xl border-[#fac337]  duration-300 transition flex justify-evenly      p-4">
@@ -193,7 +195,7 @@ const Contact = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://www.tiktok.com/@sanadofficial115"
                     target="_blank"
                     className="text-black hover:text-[#fac337] ms-5"
                   >
